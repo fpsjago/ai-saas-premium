@@ -248,3 +248,51 @@ body::after {
               color var(--duration-normal) ease,
               border-color var(--duration-normal) ease !important;
 }
+
+/* ========== CTA BUTTONS ========== */
+.cta-button-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-8);
+  background: white;
+  color: #5B21B6;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+[data-theme="light"] .cta-button-primary {
+  background: white;
+  color: #5B21B6;
+}
+
+[data-theme="dark"] .cta-button-primary {
+  background: rgba(255, 255, 255, 0.95);
+  color: #5B21B6;
+}
+
+.cta-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-8);
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.cta-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
