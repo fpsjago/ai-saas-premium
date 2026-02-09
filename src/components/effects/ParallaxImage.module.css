@@ -1,0 +1,40 @@
+.parallax {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.image {
+  position: absolute;
+  inset: -20%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(var(--blur, 0px));
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+/* Gradient overlay to blend with page background */
+.parallax::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--bg) 0%,
+    transparent 20%,
+    transparent 80%,
+    var(--bg) 100%
+  );
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image {
+    transform: none !important;
+    transition: none !important;
+  }
+}
