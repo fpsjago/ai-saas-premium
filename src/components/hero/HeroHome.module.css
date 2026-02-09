@@ -211,8 +211,10 @@
 
 .terminalPrompt { color: var(--accent); }
 .terminalCmd { color: var(--text); }
-.terminalOutput { color: #4ADE80; }
+.terminalOutput { color: #16A34A; }
 .terminalComment { color: var(--text-secondary); }
+
+:global([data-theme="dark"]) .terminalOutput { color: #4ADE80; }
 
 /* Floating metric cards */
 .metricCard {

@@ -76,10 +76,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       import { initScrollObserver } from '../lib/scroll-observer';
       import { initTheme } from '../lib/theme';
 
+      // Initialize on first load
       initScrollObserver();
       initTheme();
 
+      // Re-initialize after View Transitions
       document.addEventListener('astro:after-swap', () => {
+        // Restore theme from localStorage
+        const stored = localStorage.getItem('nexusai-theme');
+        if (stored) {
+          document.documentElement.setAttribute('data-theme', stored);
+        }
+        
         initScrollObserver();
         initTheme();
       });

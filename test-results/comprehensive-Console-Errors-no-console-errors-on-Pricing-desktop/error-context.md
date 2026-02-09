@@ -1,0 +1,432 @@
+# Page snapshot
+
+```yaml
+- main [ref=e2]:
+  - generic:
+    - progressbar "Page scroll progress"
+  - navigation "Main navigation" [ref=e4]:
+    - generic [ref=e5]:
+      - link "N NexusAI" [ref=e6] [cursor=pointer]:
+        - /url: /ai-saas-premium/
+        - generic [ref=e7]: "N"
+        - text: NexusAI
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "Features" [ref=e10] [cursor=pointer]:
+            - /url: /ai-saas-premium/features/
+        - listitem [ref=e11]:
+          - link "Pricing" [ref=e12] [cursor=pointer]:
+            - /url: /ai-saas-premium/pricing/
+        - listitem [ref=e13]:
+          - link "About" [ref=e14] [cursor=pointer]:
+            - /url: /ai-saas-premium/about/
+        - listitem [ref=e15]:
+          - link "Contact" [ref=e16] [cursor=pointer]:
+            - /url: /ai-saas-premium/contact/
+      - generic [ref=e17]:
+        - button "Switch to light mode" [ref=e18] [cursor=pointer]:
+          - img [ref=e19]
+          - img [ref=e25]
+        - link "Get Started" [ref=e27] [cursor=pointer]:
+          - /url: "#cta"
+  - generic [ref=e30]:
+    - navigation "Breadcrumb" [ref=e31]:
+      - link "Home" [ref=e33] [cursor=pointer]:
+        - /url: /ai-saas-premium/
+      - generic [ref=e34]: /Pricing
+    - heading "Simple, transparent pricing" [level=1] [ref=e35]
+    - paragraph [ref=e36]: Start free, scale as you grow. No hidden fees, no surprises, no credit card required.
+  - generic [ref=e39]:
+    - generic [ref=e40]:
+      - generic [ref=e41]: Monthly
+      - switch "Toggle annual billing" [ref=e42] [cursor=pointer]
+      - generic [ref=e43]: Annual
+      - generic [ref=e44]: Save 20%
+    - generic [ref=e45]:
+      - generic [ref=e46]:
+        - generic [ref=e47]: Starter
+        - generic [ref=e48]: Perfect for individual developers and small projects
+        - generic [ref=e49]:
+          - generic [ref=e50]: $0
+          - generic [ref=e51]: /mo
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - generic [ref=e54]: ✓
+            - text: 1,000 AI generations / month
+          - generic [ref=e55]:
+            - generic [ref=e56]: ✓
+            - text: Basic code analytics
+          - generic [ref=e57]:
+            - generic [ref=e58]: ✓
+            - text: Community support
+          - generic [ref=e59]:
+            - generic [ref=e60]: ✓
+            - text: 5 projects
+          - generic [ref=e61]:
+            - generic [ref=e62]: ✕
+            - text: Team collaboration
+          - generic [ref=e63]:
+            - generic [ref=e64]: ✕
+            - text: Custom AI models
+          - generic [ref=e65]:
+            - generic [ref=e66]: ✕
+            - text: Priority support
+          - generic [ref=e67]:
+            - generic [ref=e68]: ✕
+            - text: SSO & RBAC
+        - link "Get Started Free" [ref=e69] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e70]:
+        - generic [ref=e71]: Popular
+        - generic [ref=e72]: Pro
+        - generic [ref=e73]: For growing teams shipping AI products
+        - generic [ref=e74]:
+          - generic [ref=e75]: $49
+          - generic [ref=e76]: /mo
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]: ✓
+            - text: Unlimited AI generations
+          - generic [ref=e80]:
+            - generic [ref=e81]: ✓
+            - text: Advanced analytics dashboard
+          - generic [ref=e82]:
+            - generic [ref=e83]: ✓
+            - text: Priority email support
+          - generic [ref=e84]:
+            - generic [ref=e85]: ✓
+            - text: Unlimited projects
+          - generic [ref=e86]:
+            - generic [ref=e87]: ✓
+            - text: Team collaboration (up to 20)
+          - generic [ref=e88]:
+            - generic [ref=e89]: ✕
+            - text: Custom AI models
+          - generic [ref=e90]:
+            - generic [ref=e91]: ✕
+            - text: Dedicated account manager
+          - generic [ref=e92]:
+            - generic [ref=e93]: ✕
+            - text: SSO & RBAC
+        - link "Start Free Trial" [ref=e94] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e95]:
+        - generic [ref=e96]: Enterprise
+        - generic [ref=e97]: For organizations that need full control and compliance
+        - generic [ref=e98]:
+          - generic [ref=e99]: $199
+          - generic [ref=e100]: /mo
+        - generic [ref=e101]:
+          - generic [ref=e102]:
+            - generic [ref=e103]: ✓
+            - text: Unlimited everything
+          - generic [ref=e104]:
+            - generic [ref=e105]: ✓
+            - text: Custom analytics & reporting
+          - generic [ref=e106]:
+            - generic [ref=e107]: ✓
+            - text: Dedicated support & SLA
+          - generic [ref=e108]:
+            - generic [ref=e109]: ✓
+            - text: Unlimited projects
+          - generic [ref=e110]:
+            - generic [ref=e111]: ✓
+            - text: Unlimited team members
+          - generic [ref=e112]:
+            - generic [ref=e113]: ✓
+            - text: Custom AI model fine-tuning
+          - generic [ref=e114]:
+            - generic [ref=e115]: ✓
+            - text: Dedicated account manager
+          - generic [ref=e116]:
+            - generic [ref=e117]: ✓
+            - text: SSO, RBAC & audit logs
+        - link "Contact Sales" [ref=e118] [cursor=pointer]:
+          - /url: "#"
+  - generic [ref=e120]:
+    - generic [ref=e121]:
+      - paragraph [ref=e122]: Compare Plans
+      - heading "Feature comparison" [level=2] [ref=e123]
+    - table [ref=e125]:
+      - rowgroup [ref=e126]:
+        - row "Feature Starter Pro Enterprise" [ref=e127]:
+          - columnheader "Feature" [ref=e128]
+          - columnheader "Starter" [ref=e129]
+          - columnheader "Pro" [ref=e130]
+          - columnheader "Enterprise" [ref=e131]
+      - rowgroup [ref=e132]:
+        - row "AI Features" [ref=e133]:
+          - cell "AI Features" [ref=e134]
+        - row "AI Code Generation 1K/mo Unlimited Unlimited" [ref=e135]:
+          - cell "AI Code Generation" [ref=e136]
+          - cell "1K/mo" [ref=e137]
+          - cell "Unlimited" [ref=e138]
+          - cell "Unlimited" [ref=e139]
+        - row "Smart Test Generation — ✓ ✓" [ref=e140]:
+          - cell "Smart Test Generation" [ref=e141]
+          - cell "—" [ref=e142]
+          - cell "✓" [ref=e143]
+          - cell "✓" [ref=e144]
+        - row "Custom Model Fine-tuning — — ✓" [ref=e145]:
+          - cell "Custom Model Fine-tuning" [ref=e146]
+          - cell "—" [ref=e147]
+          - cell "—" [ref=e148]
+          - cell "✓" [ref=e149]
+        - row "AI Code Review ✓ ✓ ✓" [ref=e150]:
+          - cell "AI Code Review" [ref=e151]
+          - cell "✓" [ref=e152]
+          - cell "✓" [ref=e153]
+          - cell "✓" [ref=e154]
+        - row "Collaboration" [ref=e155]:
+          - cell "Collaboration" [ref=e156]
+        - row "Team Members 1 Up to 20 Unlimited" [ref=e157]:
+          - cell "Team Members" [ref=e158]
+          - cell "1" [ref=e159]
+          - cell "Up to 20" [ref=e160]
+          - cell "Unlimited" [ref=e161]
+        - row "Shared Workspaces — ✓ ✓" [ref=e162]:
+          - cell "Shared Workspaces" [ref=e163]
+          - cell "—" [ref=e164]
+          - cell "✓" [ref=e165]
+          - cell "✓" [ref=e166]
+        - row "Real-time Editing — ✓ ✓" [ref=e167]:
+          - cell "Real-time Editing" [ref=e168]
+          - cell "—" [ref=e169]
+          - cell "✓" [ref=e170]
+          - cell "✓" [ref=e171]
+        - row "Code Review Workflows — ✓ ✓" [ref=e172]:
+          - cell "Code Review Workflows" [ref=e173]
+          - cell "—" [ref=e174]
+          - cell "✓" [ref=e175]
+          - cell "✓" [ref=e176]
+        - row "Security & Compliance" [ref=e177]:
+          - cell "Security & Compliance" [ref=e178]
+        - row "SOC 2 Compliance — — ✓" [ref=e179]:
+          - cell "SOC 2 Compliance" [ref=e180]
+          - cell "—" [ref=e181]
+          - cell "—" [ref=e182]
+          - cell "✓" [ref=e183]
+        - row "SSO / SAML — — ✓" [ref=e184]:
+          - cell "SSO / SAML" [ref=e185]
+          - cell "—" [ref=e186]
+          - cell "—" [ref=e187]
+          - cell "✓" [ref=e188]
+        - row "RBAC — — ✓" [ref=e189]:
+          - cell "RBAC" [ref=e190]
+          - cell "—" [ref=e191]
+          - cell "—" [ref=e192]
+          - cell "✓" [ref=e193]
+        - row "Audit Logs — — ✓" [ref=e194]:
+          - cell "Audit Logs" [ref=e195]
+          - cell "—" [ref=e196]
+          - cell "—" [ref=e197]
+          - cell "✓" [ref=e198]
+        - row "Support" [ref=e199]:
+          - cell "Support" [ref=e200]
+        - row "Community Forum ✓ ✓ ✓" [ref=e201]:
+          - cell "Community Forum" [ref=e202]
+          - cell "✓" [ref=e203]
+          - cell "✓" [ref=e204]
+          - cell "✓" [ref=e205]
+        - row "Email Support — ✓ ✓" [ref=e206]:
+          - cell "Email Support" [ref=e207]
+          - cell "—" [ref=e208]
+          - cell "✓" [ref=e209]
+          - cell "✓" [ref=e210]
+        - row "Priority Support — ✓ ✓" [ref=e211]:
+          - cell "Priority Support" [ref=e212]
+          - cell "—" [ref=e213]
+          - cell "✓" [ref=e214]
+          - cell "✓" [ref=e215]
+        - row "Dedicated Account Manager — — ✓" [ref=e216]:
+          - cell "Dedicated Account Manager" [ref=e217]
+          - cell "—" [ref=e218]
+          - cell "—" [ref=e219]
+          - cell "✓" [ref=e220]
+  - generic [ref=e222]:
+    - generic [ref=e223]:
+      - paragraph [ref=e224]: FAQ
+      - heading "Frequently asked questions" [level=2] [ref=e225]
+    - generic [ref=e228]:
+      - generic [ref=e229]:
+        - button "Is there a free trial?" [ref=e230] [cursor=pointer]:
+          - text: Is there a free trial?
+          - img [ref=e231]
+        - region:
+          - generic [ref=e233]: Yes! Our Starter plan is completely free forever with 1,000 AI generations per month. For Pro and Enterprise plans, we offer a 14-day free trial with full access to all features — no credit card required.
+      - generic [ref=e234]:
+        - button "Can I cancel anytime?" [ref=e235] [cursor=pointer]:
+          - text: Can I cancel anytime?
+          - img [ref=e236]
+        - region:
+          - generic [ref=e238]: Absolutely. There are no long-term contracts or cancellation fees. You can upgrade, downgrade, or cancel your plan at any time from your account settings. If you cancel, you'll retain access until the end of your billing period.
+      - generic [ref=e239]:
+        - button "What's the difference between monthly and annual billing?" [ref=e240] [cursor=pointer]:
+          - text: What's the difference between monthly and annual billing?
+          - img [ref=e241]
+        - region:
+          - generic [ref=e243]: Annual billing saves you 20% compared to monthly billing. You'll be charged once per year instead of monthly. Both options include the same features — annual just gives you a better price.
+      - generic [ref=e244]:
+        - button "What happens if my team grows beyond the plan limit?" [ref=e245] [cursor=pointer]:
+          - text: What happens if my team grows beyond the plan limit?
+          - img [ref=e246]
+        - region:
+          - generic [ref=e248]: We'll notify you when you're approaching your team size limit. You can easily upgrade to a higher plan at any time, and we'll prorate the difference. Enterprise plans have no team size limits.
+      - generic [ref=e249]:
+        - button "How do you handle my code and data?" [ref=e250] [cursor=pointer]:
+          - text: How do you handle my code and data?
+          - img [ref=e251]
+        - region:
+          - generic [ref=e253]: Security is our top priority. Your code is encrypted in transit and at rest. We never use your code to train our AI models. Enterprise customers get additional controls including data residency options, VPC deployment, and complete audit logging.
+      - generic [ref=e254]:
+        - button "Which tools do you integrate with?" [ref=e255] [cursor=pointer]:
+          - text: Which tools do you integrate with?
+          - img [ref=e256]
+        - region:
+          - generic [ref=e258]: NexusAI integrates with 150+ tools including GitHub, GitLab, Bitbucket, Slack, Discord, Jira, Linear, Notion, VS Code, JetBrains IDEs, and all major cloud providers (AWS, GCP, Azure). We also offer a REST API and webhooks for custom integrations.
+      - generic [ref=e259]:
+        - button "Do you offer custom enterprise plans?" [ref=e260] [cursor=pointer]:
+          - text: Do you offer custom enterprise plans?
+          - img [ref=e261]
+        - region:
+          - generic [ref=e263]: Yes! Our Enterprise plan is fully customizable. We can tailor features, compliance requirements, deployment options, and support SLAs to match your organization's needs. Contact our sales team for a custom quote.
+      - generic [ref=e264]:
+        - button "What kind of support do you offer?" [ref=e265] [cursor=pointer]:
+          - text: What kind of support do you offer?
+          - img [ref=e266]
+        - region:
+          - generic [ref=e268]: Starter plan users have access to our community forum and documentation. Pro users get priority email support with 4-hour response times. Enterprise customers receive dedicated account managers, 1-hour SLA, and optional on-call support.
+  - generic [ref=e269]:
+    - generic [ref=e271]:
+      - paragraph [ref=e272]: Customer Success
+      - heading "Teams that trust NexusAI" [level=2] [ref=e273]
+    - generic [ref=e275]:
+      - generic [ref=e276]:
+        - generic "5 out of 5 stars" [ref=e277]: ★★★★★
+        - paragraph [ref=e278]: "\"The smart testing feature alone is worth the subscription. It caught critical bugs we never would have found manually."
+        - generic [ref=e279]:
+          - generic [ref=e280]: EW
+          - generic [ref=e281]:
+            - generic [ref=e282]: Emma Wilson
+            - generic [ref=e283]: QA Manager, FinTech Inc
+      - generic [ref=e284]:
+        - generic "4 out of 5 stars" [ref=e285]: ★★★★☆
+        - paragraph [ref=e286]: "\"Outstanding support team. Every question answered within the hour, and the documentation is world-class."
+        - generic [ref=e287]:
+          - generic [ref=e288]: DP
+          - generic [ref=e289]:
+            - generic [ref=e290]: David Park
+            - generic [ref=e291]: Indie Developer
+      - generic [ref=e292]:
+        - generic "5 out of 5 stars" [ref=e293]: ★★★★★
+        - paragraph [ref=e294]: "\"Finally, an AI tool that actually understands context. Not just autocomplete — real intelligence that knows my project."
+        - generic [ref=e295]:
+          - generic [ref=e296]: LZ
+          - generic [ref=e297]:
+            - generic [ref=e298]: Lisa Zhang
+            - generic [ref=e299]: ML Engineer, DeepAI
+      - generic [ref=e300]:
+        - generic "5 out of 5 stars" [ref=e301]: ★★★★★
+        - paragraph [ref=e302]: "\"Switched from 3 separate tools to NexusAI. Simpler workflow, faster output, and actually cheaper."
+        - generic [ref=e303]:
+          - generic [ref=e304]: TB
+          - generic [ref=e305]:
+            - generic [ref=e306]: Tom Brown
+            - generic [ref=e307]: Startup Founder
+      - generic [ref=e308]:
+        - generic "5 out of 5 stars" [ref=e309]: ★★★★★
+        - paragraph [ref=e310]: "\"The analytics dashboard gives us visibility into our entire development pipeline. Game-changer for our sprint planning."
+        - generic [ref=e311]:
+          - generic [ref=e312]: NR
+          - generic [ref=e313]:
+            - generic [ref=e314]: Nina Rodriguez
+            - generic [ref=e315]: Engineering Manager, Scale AI
+      - generic [ref=e316]:
+        - generic "5 out of 5 stars" [ref=e317]: ★★★★★
+        - paragraph [ref=e318]: "\"Our open-source project went from 2 contributors to 40 after integrating NexusAI. The onboarding experience is magical."
+        - generic [ref=e319]:
+          - generic [ref=e320]: KT
+          - generic [ref=e321]:
+            - generic [ref=e322]: Kai Tanaka
+            - generic [ref=e323]: OSS Maintainer
+  - generic [ref=e327]:
+    - heading "Need a custom plan?" [level=2] [ref=e328]
+    - paragraph [ref=e329]: Our team can build a plan tailored to your organization's specific needs and compliance requirements.
+    - link "Contact Sales" [ref=e330] [cursor=pointer]:
+      - /url: /ai-saas-premium/contact/
+  - generic [ref=e333]:
+    - generic [ref=e334]:
+      - generic [ref=e335]:
+        - generic [ref=e336]:
+          - generic [ref=e337]: "N"
+          - text: NexusAI
+        - paragraph [ref=e338]: Ship AI products that look as smart as they are. The developer productivity platform for modern teams.
+        - generic [ref=e339]:
+          - link "Twitter" [ref=e340] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e341]
+          - link "GitHub" [ref=e343] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e344]
+          - link "Discord" [ref=e346] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e347]
+        - generic [ref=e350]:
+          - textbox "Email for newsletter" [ref=e351]:
+            - /placeholder: Enter your email
+          - button "Subscribe" [ref=e352] [cursor=pointer]
+      - generic [ref=e353]:
+        - paragraph [ref=e354]: Product
+        - list [ref=e355]:
+          - listitem [ref=e356]:
+            - link "Features" [ref=e357] [cursor=pointer]:
+              - /url: /ai-saas-premium/features/
+          - listitem [ref=e358]:
+            - link "Pricing" [ref=e359] [cursor=pointer]:
+              - /url: /ai-saas-premium/pricing/
+          - listitem [ref=e360]:
+            - link "Case Studies" [ref=e361] [cursor=pointer]:
+              - /url: /ai-saas-premium/case-studies/
+          - listitem [ref=e362]:
+            - link "Changelog" [ref=e363] [cursor=pointer]:
+              - /url: /ai-saas-premium/changelog/
+      - generic [ref=e364]:
+        - paragraph [ref=e365]: Resources
+        - list [ref=e366]:
+          - listitem [ref=e367]:
+            - link "Documentation" [ref=e368] [cursor=pointer]:
+              - /url: /ai-saas-premium/docs/
+          - listitem [ref=e369]:
+            - link "API Reference" [ref=e370] [cursor=pointer]:
+              - /url: /ai-saas-premium/docs/
+          - listitem [ref=e371]:
+            - link "Blog" [ref=e372] [cursor=pointer]:
+              - /url: /ai-saas-premium/blog/
+          - listitem [ref=e373]:
+            - link "Community" [ref=e374] [cursor=pointer]:
+              - /url: https://discord.gg/nexusai
+      - generic [ref=e375]:
+        - paragraph [ref=e376]: Company
+        - list [ref=e377]:
+          - listitem [ref=e378]:
+            - link "About" [ref=e379] [cursor=pointer]:
+              - /url: /ai-saas-premium/about/
+          - listitem [ref=e380]:
+            - link "Team" [ref=e381] [cursor=pointer]:
+              - /url: /ai-saas-premium/about/
+          - listitem [ref=e382]:
+            - link "Contact" [ref=e383] [cursor=pointer]:
+              - /url: /ai-saas-premium/contact/
+          - listitem [ref=e384]:
+            - link "Blog" [ref=e385] [cursor=pointer]:
+              - /url: /ai-saas-premium/blog/
+    - generic [ref=e386]:
+      - generic [ref=e387]: © 2026 NexusAI. All rights reserved.
+      - generic [ref=e388]:
+        - link "Privacy Policy" [ref=e389] [cursor=pointer]:
+          - /url: "#"
+        - link "Terms of Service" [ref=e390] [cursor=pointer]:
+          - /url: "#"
+        - link "Cookie Policy" [ref=e391] [cursor=pointer]:
+          - /url: "#"
+```
