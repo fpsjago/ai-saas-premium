@@ -10,6 +10,7 @@ import PricingTable from '../components/pricing/PricingTable';
 import Accordion from '../components/ui/Accordion';
 import TestimonialGrid from '../components/social-proof/TestimonialGrid';
 import GradientOrb from '../components/effects/GradientOrb';
+import ParticleField from '../components/effects/ParticleField';
 
 import { plans, comparisonFeatures } from '../data/pricing';
 import { faqs } from '../data/faqs';
@@ -34,6 +35,9 @@ import { pricingTestimonials } from '../data/testimonials';
 
   <!-- Pricing Table -->
   <Section>
+    <ParticleField client:load count={100} />
+    <GradientOrb client:load color="rgba(34, 211, 238, 0.15)" size={500} top="10%" left="75%" />
+    <GradientOrb client:load color="rgba(139, 92, 246, 0.1)" size={600} top="60%" left="10%" delay={3} />
     <PricingTable client:load plans={plans} />
   </Section>
 
