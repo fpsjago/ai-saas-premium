@@ -58,7 +58,10 @@ export default function Footer({ className = '' }: { className?: string }) {
           </div>
         </div>
         <div className={styles.bottom}>
-          <span className={styles.copyright}>© 2026 NexusAI. All rights reserved.</span>
+          <div className={styles.bottomLeft}>
+            <span className={styles.copyright}>© 2026 NexusAI. All rights reserved.</span>
+            <span className={styles.credit}>Template by <a href="https://jagofps.dev" target="_blank" rel="noopener noreferrer" className={styles.creditLink}>jagoFps</a></span>
+          </div>
           <div className={styles.legal}>
             <a href="#" className={styles.legalLink}>Privacy Policy</a>
             <a href="#" className={styles.legalLink}>Terms of Service</a>

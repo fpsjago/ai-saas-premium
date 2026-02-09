@@ -1,4 +1,5 @@
 ---
+import { getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Container from '../components/layout/Container.astro';
 import Section from '../components/layout/Section.astro';
@@ -21,6 +22,12 @@ import ParticleField from '../components/effects/ParticleField';
 import { homeFeatures, featureShowcases } from '../data/features';
 import { carouselTestimonials } from '../data/testimonials';
 import { plans } from '../data/pricing';
+
+import codeGenImg from '../assets/features/code-generation.jpg';
+import testingImg from '../assets/features/testing-automation.jpg';
+
+const optimizedCodeGen = await getImage({ src: codeGenImg, format: 'webp', width: 800 });
+const optimizedTesting = await getImage({ src: testingImg, format: 'webp', width: 800 });
 ---
 
 <Layout>
@@ -71,10 +78,10 @@ import { plans } from '../data/pricing';
 
   <!-- Feature Showcases -->
   <Section>
-    <FeatureShowcase client:load {...featureShowcases[0]} />
+    <FeatureShowcase client:load {...featureShowcases[0]} imageSrc={optimizedCodeGen.src} imageAlt="AI code generation interface" />
   </Section>
   <Section>
-    <FeatureShowcase client:load {...featureShowcases[1]} />
+    <FeatureShowcase client:load {...featureShowcases[1]} imageSrc={optimizedTesting.src} imageAlt="Automated testing dashboard" />
   </Section>
 
   <!-- Stats Bar -->

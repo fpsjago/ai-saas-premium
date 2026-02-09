@@ -1,4 +1,5 @@
 ---
+import { getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Container from '../components/layout/Container.astro';
 import Section from '../components/layout/Section.astro';
@@ -16,6 +17,20 @@ import ParticleField from '../components/effects/ParticleField';
 
 import { detailedFeatures, featureShowcases } from '../data/features';
 import { featureTestimonials } from '../data/testimonials';
+
+import codeGenImg from '../assets/features/code-generation.jpg';
+import testingImg from '../assets/features/testing-automation.jpg';
+import analyticsImg from '../assets/features/analytics-dashboard.jpg';
+
+const optimizedCodeGen = await getImage({ src: codeGenImg, format: 'webp', width: 800 });
+const optimizedTesting = await getImage({ src: testingImg, format: 'webp', width: 800 });
+const optimizedAnalytics = await getImage({ src: analyticsImg, format: 'webp', width: 800 });
+
+const showcaseImages = [
+  { src: optimizedCodeGen.src, alt: 'AI code generation interface' },
+  { src: optimizedTesting.src, alt: 'Automated testing dashboard' },
+  { src: optimizedAnalytics.src, alt: 'Analytics and insights dashboard' },
+];
 ---
 
 <Layout title="Features — NexusAI" description="Explore NexusAI's powerful features: AI code generation, smart testing, real-time collaboration, advanced analytics, and more.">
@@ -61,9 +76,9 @@ import { featureTestimonials } from '../data/testimonials';
   </Section>
 
   <!-- Feature Showcases (3 deep dives) -->
-  {featureShowcases.map((showcase) => (
+  {featureShowcases.map((showcase, i) => (
     <Section>
-      <FeatureShowcase client:load {...showcase} />
+      <FeatureShowcase client:load {...showcase} imageSrc={showcaseImages[i].src} imageAlt={showcaseImages[i].alt} />
     </Section>
   ))}
 

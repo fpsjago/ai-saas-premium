@@ -6,6 +6,8 @@ export interface FeatureShowcaseProps {
   description: string;
   bullets?: string[];
   visual?: string;
+  imageSrc?: string;
+  imageAlt?: string;
   reversed?: boolean;
 }
 
@@ -14,7 +16,9 @@ export default function FeatureShowcase({
   title,
   description,
   bullets = [],
-  visual = "Visual Placeholder",
+  visual,
+  imageSrc,
+  imageAlt,
   reversed = false,
 }: FeatureShowcaseProps) {
   return (
@@ -35,7 +39,19 @@ export default function FeatureShowcase({
         )}
       </div>
       <div className={`${styles.visualSide} ${reversed ? 'fade-left' : 'fade-right'}`}>
-        <div className={styles.visualFrame}>{visual}</div>
+        <div className={styles.visualFrame}>
+          {imageSrc ? (
+            <img
+              src={imageSrc}
+              alt={imageAlt || title}
+              className={styles.visualImage}
+              loading="lazy"
+              decoding="async"
+            />
+          ) : visual ? (
+            visual
+          ) : null}
+        </div>
       </div>
     </div>
   );
