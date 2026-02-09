@@ -193,16 +193,17 @@ test.describe('Interactive Elements', () => {
 // ============================================================
 test.describe('Accordion', () => {
   test('accordion expands and collapses', async ({ page }) => {
-    // Check docs page or pricing page for FAQ accordion
     await page.goto(`${BASE}/docs/`);
     await page.waitForLoadState('networkidle');
-    const triggers = page.locator('[aria-expanded]');
+    // Target accordion triggers specifically (not nav hamburger)
+    const triggers = page.locator('[aria-controls^="panel-"]');
     const count = await triggers.count();
     if (count > 0) {
       const firstTrigger = triggers.first();
-      await firstTrigger.click();
+      await firstTrigger.scrollIntoViewIfNeeded();
+      await firstTrigger.click({ force: true });
       await expect(firstTrigger).toHaveAttribute('aria-expanded', 'true');
-      await firstTrigger.click();
+      await firstTrigger.click({ force: true });
       await expect(firstTrigger).toHaveAttribute('aria-expanded', 'false');
     }
   });

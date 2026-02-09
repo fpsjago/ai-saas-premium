@@ -81,6 +81,8 @@
   display: flex;
   align-items: center;
   gap: var(--space-3);
+  position: relative;
+  z-index: 101;
 }
 .hamburger {
   display: none;
@@ -90,6 +92,8 @@
   border: none;
   cursor: pointer;
   padding: var(--space-2);
+  position: relative;
+  z-index: 102;
 }
 .hamburger span {
   display: block;
@@ -105,7 +109,7 @@
 
 @media (max-width: 768px) {
   .links { display: none; }
-  .hamburger { display: flex; z-index: 10; }
+  .hamburger { display: flex; }
   .actions a { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {

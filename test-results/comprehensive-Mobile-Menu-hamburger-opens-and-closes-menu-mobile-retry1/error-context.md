@@ -1,0 +1,426 @@
+# Page snapshot
+
+```yaml
+- main [ref=e2]:
+  - generic:
+    - progressbar "Page scroll progress"
+  - navigation "Main navigation" [ref=e4]:
+    - generic [ref=e5]:
+      - link "N NexusAI" [ref=e6] [cursor=pointer]:
+        - /url: /ai-saas-premium/
+        - generic [ref=e7]: "N"
+        - text: NexusAI
+      - generic [ref=e8]:
+        - button "Switch to dark mode" [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+          - img [ref=e16]
+        - button "Open menu" [ref=e18] [cursor=pointer]
+  - generic [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]: Now in Public Beta
+      - heading "Build AI Products That Ship Fast" [level=1] [ref=e28]:
+        - text: Build AI Products
+        - text: That Ship Fast
+      - paragraph [ref=e29]: NexusAI is the developer productivity platform that helps modern teams build, test, and deploy AI-powered applications 10x faster.
+      - generic [ref=e30]:
+        - link "Start Free Trial →" [ref=e31] [cursor=pointer]:
+          - /url: "#"
+        - link "View Demo" [ref=e32] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: JD
+          - generic [ref=e36]: AK
+          - generic [ref=e37]: MR
+          - generic [ref=e38]: SL
+        - paragraph [ref=e39]:
+          - text: Join
+          - strong [ref=e40]: 10,000+
+          - text: developers shipping with NexusAI
+    - generic [ref=e42]:
+      - generic [ref=e47]: terminal
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: ~ $
+          - generic [ref=e51]: npx create-nexus-app my-project
+        - generic [ref=e53]: ✓ Project scaffolded in 2.3s
+        - generic [ref=e55]: ✓ AI models configured
+        - generic [ref=e57]: ✓ Deploy pipeline ready
+        - generic [ref=e59]: "# Your AI app is live 🚀"
+  - generic "Trusted by innovative teams" [ref=e62]:
+    - generic [ref=e63]: Trusted by innovative teams
+    - generic [ref=e64]:
+      - generic [ref=e65]: Vercel
+      - generic [ref=e66]: Stripe
+      - generic [ref=e67]: Supabase
+      - generic [ref=e68]: Planetscale
+      - generic [ref=e69]: Linear
+      - generic [ref=e70]: Figma
+      - generic [ref=e71]: GitHub
+      - generic [ref=e72]: Slack
+      - generic [ref=e73]: Vercel
+      - generic [ref=e74]: Stripe
+      - generic [ref=e75]: Supabase
+      - generic [ref=e76]: Planetscale
+      - generic [ref=e77]: Linear
+      - generic [ref=e78]: Figma
+      - generic [ref=e79]: GitHub
+      - generic [ref=e80]: Slack
+  - generic [ref=e81]:
+    - generic [ref=e83]:
+      - paragraph [ref=e84]: Why NexusAI
+      - heading "Everything your team needs to ship AI" [level=2] [ref=e85]
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - generic [ref=e89]: 🧠
+        - heading "AI Code Generation" [level=3] [ref=e90]
+        - paragraph [ref=e91]: Generate production-ready code with context-aware AI that understands your codebase patterns and conventions.
+      - generic [ref=e92]:
+        - generic [ref=e93]: ⚡
+        - heading "Lightning Deploys" [level=3] [ref=e94]
+        - paragraph [ref=e95]: Deploy to any cloud provider in under 100ms with our optimized edge network and zero-downtime releases.
+      - generic [ref=e96]:
+        - generic [ref=e97]: 👥
+        - heading "Real-time Collaboration" [level=3] [ref=e98]
+        - paragraph [ref=e99]: Work together with your team in real-time with multiplayer editing, live cursors, and instant sync.
+      - generic [ref=e100]:
+        - generic [ref=e101]: 📊
+        - heading "Advanced Analytics" [level=3] [ref=e102]
+        - paragraph [ref=e103]: Track performance metrics, user behavior, and AI model accuracy with our comprehensive analytics dashboard.
+      - generic [ref=e104]:
+        - generic [ref=e105]: 🛡️
+        - heading "Enterprise Security" [level=3] [ref=e106]
+        - paragraph [ref=e107]: SOC 2 Type II certified with end-to-end encryption, SSO, RBAC, and full audit logging.
+      - generic [ref=e108]:
+        - generic [ref=e109]: 🔌
+        - heading "150+ Integrations" [level=3] [ref=e110]
+        - paragraph [ref=e111]: Connect seamlessly with GitHub, GitLab, Slack, Jira, Linear, and 140+ other tools your team already uses.
+  - generic [ref=e112]:
+    - generic [ref=e114]:
+      - paragraph [ref=e115]: Platform
+      - heading "One platform, infinite possibilities" [level=2] [ref=e116]
+    - generic [ref=e119]:
+      - generic [ref=e121]:
+        - generic [ref=e122]: 🧠
+        - heading "AI Code Generation" [level=3] [ref=e123]
+        - paragraph [ref=e124]: Generate production-ready code with context-aware AI that understands your codebase patterns and conventions.
+        - generic [ref=e125]: 10x
+      - generic [ref=e127]:
+        - generic [ref=e128]: ⚡
+        - heading "Lightning Deploys" [level=3] [ref=e129]
+        - paragraph [ref=e130]: Deploy to any cloud provider in under 100ms with our optimized edge network and zero-downtime releases.
+        - generic [ref=e131]: 94ms
+      - generic [ref=e133]:
+        - generic [ref=e134]: 👥
+        - heading "Real-time Collaboration" [level=3] [ref=e135]
+        - paragraph [ref=e136]: Work together with your team in real-time with multiplayer editing, live cursors, and instant sync.
+      - generic [ref=e138]:
+        - generic [ref=e139]: 📊
+        - heading "Advanced Analytics" [level=3] [ref=e140]
+        - paragraph [ref=e141]: Track performance metrics, user behavior, and AI model accuracy with our comprehensive analytics dashboard.
+      - generic [ref=e143]:
+        - generic [ref=e144]: 🛡️
+        - heading "Enterprise Security" [level=3] [ref=e145]
+        - paragraph [ref=e146]: SOC 2 Type II certified with end-to-end encryption, SSO, RBAC, and full audit logging.
+      - generic [ref=e148]:
+        - generic [ref=e149]: 🔌
+        - heading "150+ Integrations" [level=3] [ref=e150]
+        - paragraph [ref=e151]: Connect seamlessly with GitHub, GitLab, Slack, Jira, Linear, and 140+ other tools your team already uses.
+  - generic [ref=e154]:
+    - generic [ref=e155]:
+      - generic [ref=e156]: AI Code Generation
+      - heading "Write production code 10x faster" [level=2] [ref=e157]
+      - paragraph [ref=e158]: Our AI understands your codebase context, coding standards, and team patterns. It generates clean, tested, production-ready code that fits naturally into your existing architecture.
+      - generic [ref=e159]:
+        - generic [ref=e160]:
+          - generic [ref=e161]: ✓
+          - text: Context-aware suggestions across your entire codebase
+        - generic [ref=e162]:
+          - generic [ref=e163]: ✓
+          - text: Multi-language support for 40+ programming languages
+        - generic [ref=e164]:
+          - generic [ref=e165]: ✓
+          - text: Automatic refactoring and code optimization
+        - generic [ref=e166]:
+          - generic [ref=e167]: ✓
+          - text: Built-in code review and quality checks
+    - generic [ref=e169]: Visual Placeholder
+  - generic [ref=e172]:
+    - generic [ref=e173]:
+      - generic [ref=e174]: Smart Testing
+      - heading "Automated test coverage on autopilot" [level=2] [ref=e175]
+      - paragraph [ref=e176]: Stop writing tests manually. NexusAI analyzes your code changes and automatically generates comprehensive test suites, including edge cases humans typically miss.
+      - generic [ref=e177]:
+        - generic [ref=e178]:
+          - generic [ref=e179]: ✓
+          - text: Edge case detection and boundary testing
+        - generic [ref=e180]:
+          - generic [ref=e181]: ✓
+          - text: Visual regression testing for UI components
+        - generic [ref=e182]:
+          - generic [ref=e183]: ✓
+          - text: Performance benchmarks and load testing
+        - generic [ref=e184]:
+          - generic [ref=e185]: ✓
+          - text: Integration test generation from API specs
+    - generic [ref=e187]: Visual Placeholder
+  - generic [ref=e188]:
+    - generic [ref=e190]:
+      - paragraph [ref=e191]: By the Numbers
+      - heading "Trusted by developers worldwide" [level=2] [ref=e192]
+    - generic [ref=e194]:
+      - generic [ref=e195]:
+        - generic [ref=e196]: 0+
+        - generic [ref=e197]: Active Developers
+      - generic [ref=e198]:
+        - generic [ref=e199]: 0.9%
+        - generic [ref=e200]: Uptime SLA
+      - generic [ref=e201]:
+        - generic [ref=e202]: 0+
+        - generic [ref=e203]: Countries
+      - generic [ref=e204]:
+        - generic [ref=e205]: 0ms
+        - generic [ref=e206]: Avg Deploy Time
+  - generic [ref=e207]:
+    - generic [ref=e209]:
+      - paragraph [ref=e210]: Testimonials
+      - heading "Loved by developers everywhere" [level=2] [ref=e211]
+    - region "Testimonials" [ref=e213]:
+      - generic [ref=e214]:
+        - group "Testimonial 1 of 5" [ref=e215]:
+          - paragraph [ref=e216]: "\"NexusAI transformed how our team builds AI products. We shipped 3x faster in the first month and haven't looked back.\""
+          - generic [ref=e217]:
+            - generic [ref=e218]: SC
+            - generic [ref=e219]:
+              - generic [ref=e220]: Sarah Chen
+              - generic [ref=e221]: CTO, Acme Corp
+        - group "Testimonial 2 of 5" [ref=e222]:
+          - paragraph [ref=e223]: "\"The AI code generation is incredibly accurate. It understands our codebase patterns and generates code that feels like a senior engineer wrote it.\""
+          - generic [ref=e224]:
+            - generic [ref=e225]: MJ
+            - generic [ref=e226]:
+              - generic [ref=e227]: Marcus Johnson
+              - generic [ref=e228]: Lead Engineer, TechFlow
+        - group "Testimonial 3 of 5" [ref=e229]:
+          - paragraph [ref=e230]: "\"Best developer tool investment we've made this year. The ROI was immediate and our entire engineering team loves it.\""
+          - generic [ref=e231]:
+            - generic [ref=e232]: PP
+            - generic [ref=e233]:
+              - generic [ref=e234]: Priya Patel
+              - generic [ref=e235]: VP Engineering, DataStack
+        - group "Testimonial 4 of 5" [ref=e236]:
+          - paragraph [ref=e237]: "\"Incredibly intuitive. It feels like having a senior engineer pair-programming with you around the clock.\""
+          - generic [ref=e238]:
+            - generic [ref=e239]: AK
+            - generic [ref=e240]:
+              - generic [ref=e241]: Alex Kim
+              - generic [ref=e242]: Fullstack Developer
+        - group "Testimonial 5 of 5" [ref=e243]:
+          - paragraph [ref=e244]: "\"We reduced our deployment time from hours to minutes. The CI/CD integration is completely seamless.\""
+          - generic [ref=e245]:
+            - generic [ref=e246]: JL
+            - generic [ref=e247]:
+              - generic [ref=e248]: Jordan Lee
+              - generic [ref=e249]: DevOps Lead, CloudNine
+      - tablist "Testimonial navigation" [ref=e250]:
+        - tab "Go to testimonial 1" [ref=e251] [cursor=pointer]
+        - tab "Go to testimonial 2" [selected] [ref=e252] [cursor=pointer]
+        - tab "Go to testimonial 3" [ref=e253] [cursor=pointer]
+        - tab "Go to testimonial 4" [ref=e254] [cursor=pointer]
+        - tab "Go to testimonial 5" [ref=e255] [cursor=pointer]
+  - generic [ref=e256]:
+    - generic [ref=e258]:
+      - paragraph [ref=e259]: Pricing
+      - heading "Simple, transparent pricing" [level=2] [ref=e260]
+      - paragraph [ref=e261]: Start free, scale as you grow. No hidden fees, no surprises.
+    - generic [ref=e263]:
+      - generic [ref=e264]:
+        - generic [ref=e265]: Monthly
+        - switch "Toggle annual billing" [ref=e266] [cursor=pointer]
+        - generic [ref=e267]: Annual
+        - generic [ref=e268]: Save 20%
+      - generic [ref=e269]:
+        - generic [ref=e270]:
+          - generic [ref=e271]: Starter
+          - generic [ref=e272]: Perfect for individual developers and small projects
+          - generic [ref=e273]:
+            - generic [ref=e274]: $0
+            - generic [ref=e275]: /mo
+          - generic [ref=e276]:
+            - generic [ref=e277]:
+              - generic [ref=e278]: ✓
+              - text: 1,000 AI generations / month
+            - generic [ref=e279]:
+              - generic [ref=e280]: ✓
+              - text: Basic code analytics
+            - generic [ref=e281]:
+              - generic [ref=e282]: ✓
+              - text: Community support
+            - generic [ref=e283]:
+              - generic [ref=e284]: ✓
+              - text: 5 projects
+            - generic [ref=e285]:
+              - generic [ref=e286]: ✕
+              - text: Team collaboration
+            - generic [ref=e287]:
+              - generic [ref=e288]: ✕
+              - text: Custom AI models
+            - generic [ref=e289]:
+              - generic [ref=e290]: ✕
+              - text: Priority support
+            - generic [ref=e291]:
+              - generic [ref=e292]: ✕
+              - text: SSO & RBAC
+          - link "Get Started Free" [ref=e293] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=e294]:
+          - generic [ref=e295]: Popular
+          - generic [ref=e296]: Pro
+          - generic [ref=e297]: For growing teams shipping AI products
+          - generic [ref=e298]:
+            - generic [ref=e299]: $49
+            - generic [ref=e300]: /mo
+          - generic [ref=e301]:
+            - generic [ref=e302]:
+              - generic [ref=e303]: ✓
+              - text: Unlimited AI generations
+            - generic [ref=e304]:
+              - generic [ref=e305]: ✓
+              - text: Advanced analytics dashboard
+            - generic [ref=e306]:
+              - generic [ref=e307]: ✓
+              - text: Priority email support
+            - generic [ref=e308]:
+              - generic [ref=e309]: ✓
+              - text: Unlimited projects
+            - generic [ref=e310]:
+              - generic [ref=e311]: ✓
+              - text: Team collaboration (up to 20)
+            - generic [ref=e312]:
+              - generic [ref=e313]: ✕
+              - text: Custom AI models
+            - generic [ref=e314]:
+              - generic [ref=e315]: ✕
+              - text: Dedicated account manager
+            - generic [ref=e316]:
+              - generic [ref=e317]: ✕
+              - text: SSO & RBAC
+          - link "Start Free Trial" [ref=e318] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=e319]:
+          - generic [ref=e320]: Enterprise
+          - generic [ref=e321]: For organizations that need full control and compliance
+          - generic [ref=e322]:
+            - generic [ref=e323]: $199
+            - generic [ref=e324]: /mo
+          - generic [ref=e325]:
+            - generic [ref=e326]:
+              - generic [ref=e327]: ✓
+              - text: Unlimited everything
+            - generic [ref=e328]:
+              - generic [ref=e329]: ✓
+              - text: Custom analytics & reporting
+            - generic [ref=e330]:
+              - generic [ref=e331]: ✓
+              - text: Dedicated support & SLA
+            - generic [ref=e332]:
+              - generic [ref=e333]: ✓
+              - text: Unlimited projects
+            - generic [ref=e334]:
+              - generic [ref=e335]: ✓
+              - text: Unlimited team members
+            - generic [ref=e336]:
+              - generic [ref=e337]: ✓
+              - text: Custom AI model fine-tuning
+            - generic [ref=e338]:
+              - generic [ref=e339]: ✓
+              - text: Dedicated account manager
+            - generic [ref=e340]:
+              - generic [ref=e341]: ✓
+              - text: SSO, RBAC & audit logs
+          - link "Contact Sales" [ref=e342] [cursor=pointer]:
+            - /url: "#"
+  - generic [ref=e347]:
+    - heading "Ready to ship smarter?" [level=2] [ref=e348]
+    - paragraph [ref=e349]: Join 10,000+ developers building the future with NexusAI. Start your free trial today.
+    - generic [ref=e350]:
+      - link "Start Free Trial" [ref=e351] [cursor=pointer]:
+        - /url: "#"
+      - link "Talk to Sales" [ref=e352] [cursor=pointer]:
+        - /url: /ai-saas-premium/contact/
+  - generic [ref=e355]:
+    - generic [ref=e356]:
+      - generic [ref=e357]:
+        - generic [ref=e358]:
+          - generic [ref=e359]: "N"
+          - text: NexusAI
+        - paragraph [ref=e360]: Ship AI products that look as smart as they are. The developer productivity platform for modern teams.
+        - generic [ref=e361]:
+          - link "Twitter" [ref=e362] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e363]
+          - link "GitHub" [ref=e365] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e366]
+          - link "Discord" [ref=e368] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e369]
+        - generic [ref=e372]:
+          - textbox "Email for newsletter" [ref=e373]:
+            - /placeholder: Enter your email
+          - button "Subscribe" [ref=e374] [cursor=pointer]
+      - generic [ref=e375]:
+        - paragraph [ref=e376]: Product
+        - list [ref=e377]:
+          - listitem [ref=e378]:
+            - link "Features" [ref=e379] [cursor=pointer]:
+              - /url: /ai-saas-premium/features/
+          - listitem [ref=e380]:
+            - link "Pricing" [ref=e381] [cursor=pointer]:
+              - /url: /ai-saas-premium/pricing/
+          - listitem [ref=e382]:
+            - link "Case Studies" [ref=e383] [cursor=pointer]:
+              - /url: /ai-saas-premium/case-studies/
+          - listitem [ref=e384]:
+            - link "Changelog" [ref=e385] [cursor=pointer]:
+              - /url: /ai-saas-premium/changelog/
+      - generic [ref=e386]:
+        - paragraph [ref=e387]: Resources
+        - list [ref=e388]:
+          - listitem [ref=e389]:
+            - link "Documentation" [ref=e390] [cursor=pointer]:
+              - /url: /ai-saas-premium/docs/
+          - listitem [ref=e391]:
+            - link "API Reference" [ref=e392] [cursor=pointer]:
+              - /url: /ai-saas-premium/docs/
+          - listitem [ref=e393]:
+            - link "Blog" [ref=e394] [cursor=pointer]:
+              - /url: /ai-saas-premium/blog/
+          - listitem [ref=e395]:
+            - link "Community" [ref=e396] [cursor=pointer]:
+              - /url: https://discord.gg/nexusai
+      - generic [ref=e397]:
+        - paragraph [ref=e398]: Company
+        - list [ref=e399]:
+          - listitem [ref=e400]:
+            - link "About" [ref=e401] [cursor=pointer]:
+              - /url: /ai-saas-premium/about/
+          - listitem [ref=e402]:
+            - link "Team" [ref=e403] [cursor=pointer]:
+              - /url: /ai-saas-premium/about/
+          - listitem [ref=e404]:
+            - link "Contact" [ref=e405] [cursor=pointer]:
+              - /url: /ai-saas-premium/contact/
+          - listitem [ref=e406]:
+            - link "Blog" [ref=e407] [cursor=pointer]:
+              - /url: /ai-saas-premium/blog/
+    - generic [ref=e408]:
+      - generic [ref=e409]: © 2026 NexusAI. All rights reserved.
+      - generic [ref=e410]:
+        - link "Privacy Policy" [ref=e411] [cursor=pointer]:
+          - /url: "#"
+        - link "Terms of Service" [ref=e412] [cursor=pointer]:
+          - /url: "#"
+        - link "Cookie Policy" [ref=e413] [cursor=pointer]:
+          - /url: "#"
+```
