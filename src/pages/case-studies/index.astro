@@ -1,0 +1,215 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Container from '../../components/layout/Container.astro';
+import Section from '../../components/layout/Section.astro';
+import { getCollection } from 'astro:content';
+
+const allCaseStudies = await getCollection('case-studies');
+const sorted = allCaseStudies.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const featured = sorted.find(s => s.data.featured) || sorted[0];
+const rest = sorted.filter(s => s.slug !== featured.slug);
+---
+
+<Layout
+  title="Case Studies — NexusAI"
+  description="See how real teams use NexusAI to ship faster, scale effortlessly, and boost developer productivity."
+>
+  <!-- Hero -->
+  <Section size="lg" class="page-hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="grid-bg"></div>
+      <div class="gradient-orb gradient-orb--purple"></div>
+    </div>
+    <Container>
+      <div style="text-align: center; position: relative; z-index: 1;">
+        <nav class="breadcrumbs fade-up" aria-label="Breadcrumb">
+          <a href="/ai-saas-premium/">Home</a>
+          <span class="sep">/</span>
+          <span class="current">Case Studies</span>
+        </nav>
+        <h1 class="fade-up" style="margin-bottom: var(--space-4);">
+          <span class="gradient-text">Real results from real teams</span>
+        </h1>
+        <p class="fade-up delay-1" style="font-size: var(--text-body-lg); max-width: 600px; margin: 0 auto; color: var(--text-secondary);">
+          Discover how leading companies use NexusAI to transform their development workflows and achieve extraordinary results.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Featured Case Study -->
+  <Section>
+    <Container>
+      <a href={`/ai-saas-premium/case-studies/${featured.slug}/`} class="featured-case fade-up">
+        <div class="featured-case__badge">{featured.data.logo} Featured</div>
+        <div class="featured-case__content">
+          <span class="featured-case__industry">{featured.data.industry}</span>
+          <h2 class="featured-case__title">{featured.data.title}</h2>
+          <p class="featured-case__excerpt">{featured.data.excerpt}</p>
+          <div class="featured-case__stats">
+            <div class="stat">
+              <span class="stat__value">{featured.data.stats.value1}</span>
+              <span class="stat__label">{featured.data.stats.metric1}</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">{featured.data.stats.value2}</span>
+              <span class="stat__label">{featured.data.stats.metric2}</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">{featured.data.stats.value3}</span>
+              <span class="stat__label">{featured.data.stats.metric3}</span>
+            </div>
+          </div>
+        </div>
+        <span class="featured-case__cta">Read case study →</span>
+      </a>
+    </Container>
+  </Section>
+
+  <!-- Case Study Grid -->
+  <Section>
+    <Container>
+      <div class="case-grid">
+        {rest.map((study) => (
+          <a href={`/ai-saas-premium/case-studies/${study.slug}/`} class="case-card fade-up">
+            <div class="case-card__header">
+              <span class="case-card__logo">{study.data.logo}</span>
+              <span class="case-card__company">{study.data.company}</span>
+            </div>
+            <h3 class="case-card__title">{study.data.title}</h3>
+            <p class="case-card__excerpt">{study.data.excerpt}</p>
+            <div class="case-card__stats">
+              <div class="stat stat--sm">
+                <span class="stat__value">{study.data.stats.value1}</span>
+                <span class="stat__label">{study.data.stats.metric1}</span>
+              </div>
+              <div class="stat stat--sm">
+                <span class="stat__value">{study.data.stats.value2}</span>
+                <span class="stat__label">{study.data.stats.metric2}</span>
+              </div>
+            </div>
+            <span class="case-card__link">Read case study →</span>
+          </a>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA Inline -->
+  <Section>
+    <Container>
+      <div class="cta-inline fade-up">
+        <p class="cta-inline__text">Want results like these?</p>
+        <a href="/ai-saas-premium/pricing/" class="btn btn--primary">Start free trial</a>
+      </div>
+    </Container>
+  </Section>
+</Layout>
+
+<style>
+  .page-hero { position: relative; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; }
+  .grid-bg {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(var(--border) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    opacity: 0.4;
+  }
+  .gradient-orb--purple {
+    position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);
+    width: 500px; height: 500px; border-radius: 50%;
+    background: rgba(139, 92, 246, 0.1); filter: blur(80px);
+  }
+  .breadcrumbs { margin-bottom: var(--space-6); font-size: var(--text-sm); color: var(--text-muted); }
+  .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumbs a:hover { color: var(--primary); }
+  .breadcrumbs .sep { margin: 0 var(--space-2); }
+  .breadcrumbs .current { color: var(--text); }
+
+  .featured-case {
+    display: block; text-decoration: none; color: inherit;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-xl); padding: var(--space-10);
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    position: relative;
+  }
+  .featured-case:hover {
+    border-color: var(--primary); transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.1);
+  }
+  .featured-case__badge {
+    display: inline-flex; align-items: center; gap: var(--space-2);
+    font-size: var(--text-sm); font-weight: 600; color: var(--primary);
+    margin-bottom: var(--space-4);
+  }
+  .featured-case__industry {
+    font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--accent); font-weight: 600;
+  }
+  .featured-case__title {
+    font-size: var(--text-h2); margin: var(--space-3) 0 var(--space-4);
+    line-height: 1.2;
+  }
+  .featured-case__excerpt {
+    font-size: var(--text-body-lg); color: var(--text-secondary);
+    max-width: 700px; margin-bottom: var(--space-8);
+  }
+  .featured-case__stats {
+    display: flex; gap: var(--space-8); flex-wrap: wrap;
+    margin-bottom: var(--space-6);
+  }
+  .featured-case__cta { color: var(--primary); font-weight: 600; }
+
+  .stat__value {
+    display: block; font-size: var(--text-h3); font-weight: 700;
+    background: var(--gradient-primary); -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .stat__label { font-size: var(--text-sm); color: var(--text-muted); }
+  .stat--sm .stat__value { font-size: var(--text-body-lg); }
+
+  .case-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: var(--space-6);
+  }
+  .case-card {
+    display: flex; flex-direction: column; text-decoration: none; color: inherit;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: var(--space-8);
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  .case-card:hover {
+    border-color: var(--primary); transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  }
+  .case-card__header {
+    display: flex; align-items: center; gap: var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+  .case-card__logo { font-size: 1.5rem; }
+  .case-card__company { font-size: var(--text-sm); font-weight: 600; color: var(--text-secondary); }
+  .case-card__title { font-size: var(--text-h4); margin-bottom: var(--space-3); line-height: 1.3; }
+  .case-card__excerpt { font-size: var(--text-sm); color: var(--text-secondary); flex: 1; margin-bottom: var(--space-6); }
+  .case-card__stats { display: flex; gap: var(--space-6); margin-bottom: var(--space-4); }
+  .case-card__link { color: var(--primary); font-weight: 600; font-size: var(--text-sm); }
+
+  .cta-inline {
+    display: flex; align-items: center; justify-content: center;
+    gap: var(--space-6); padding: var(--space-8);
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-xl); flex-wrap: wrap;
+  }
+  .cta-inline__text { font-size: var(--text-h3); font-weight: 600; }
+  .btn { padding: var(--space-3) var(--space-6); border-radius: var(--radius-full); font-weight: 600; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+  .btn--primary { background: var(--gradient-primary); color: white; }
+  .btn--primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px var(--primary-glow); }
+
+  @media (max-width: 768px) {
+    .case-grid { grid-template-columns: 1fr; }
+    .featured-case { padding: var(--space-6); }
+    .featured-case__stats { gap: var(--space-4); }
+    .cta-inline { flex-direction: column; text-align: center; }
+  }
+</style>

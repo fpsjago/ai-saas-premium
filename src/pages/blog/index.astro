@@ -1,0 +1,240 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Container from '../../components/layout/Container.astro';
+import Section from '../../components/layout/Section.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const sorted = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const featured = sorted.find(p => p.data.featured) || sorted[0];
+const rest = sorted.filter(p => p.slug !== featured.slug);
+const categories = [...new Set(allPosts.map(p => p.data.category))];
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+---
+
+<Layout
+  title="Blog — NexusAI"
+  description="Insights, tutorials, and updates from the NexusAI team on AI deployment, developer productivity, and platform engineering."
+>
+  <!-- Hero -->
+  <Section size="lg" class="page-hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="grid-bg"></div>
+      <div class="gradient-orb gradient-orb--purple"></div>
+    </div>
+    <Container>
+      <div style="text-align: center; position: relative; z-index: 1;">
+        <nav class="breadcrumbs fade-up" aria-label="Breadcrumb">
+          <a href="/ai-saas-premium/">Home</a>
+          <span class="sep">/</span>
+          <span class="current">Blog</span>
+        </nav>
+        <h1 class="fade-up" style="margin-bottom: var(--space-4);">
+          <span class="gradient-text">Insights & Updates</span>
+        </h1>
+        <p class="fade-up delay-1" style="font-size: var(--text-body-lg); max-width: 600px; margin: 0 auto; color: var(--text-secondary);">
+          Deep dives into AI deployment, developer productivity, and the future of platform engineering.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Featured Post -->
+  <Section>
+    <Container>
+      <a href={`/ai-saas-premium/blog/${featured.slug}/`} class="featured-post fade-up">
+        <div class="featured-post__meta">
+          <span class="category-tag">{featured.data.category}</span>
+          <span class="date">{formatDate(featured.data.date)}</span>
+          <span class="read-time">{featured.data.readTime}</span>
+        </div>
+        <h2 class="featured-post__title">{featured.data.title}</h2>
+        <p class="featured-post__excerpt">{featured.data.excerpt}</p>
+        <div class="featured-post__author">
+          <div class="avatar">{featured.data.author[0]}</div>
+          <span>{featured.data.author}</span>
+        </div>
+      </a>
+    </Container>
+  </Section>
+
+  <!-- Blog Grid + Sidebar -->
+  <Section>
+    <Container>
+      <div class="blog-layout">
+        <div class="blog-grid">
+          {rest.map((post) => (
+            <a href={`/ai-saas-premium/blog/${post.slug}/`} class="blog-card fade-up">
+              <div class="blog-card__meta">
+                <span class="category-tag category-tag--sm">{post.data.category}</span>
+                <span class="date">{formatDate(post.data.date)}</span>
+              </div>
+              <h3 class="blog-card__title">{post.data.title}</h3>
+              <p class="blog-card__excerpt">{post.data.excerpt}</p>
+              <div class="blog-card__footer">
+                <div class="blog-card__author">
+                  <div class="avatar avatar--sm">{post.data.author[0]}</div>
+                  <span>{post.data.author}</span>
+                </div>
+                <span class="read-time">{post.data.readTime}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <aside class="blog-sidebar">
+          <!-- Categories -->
+          <div class="sidebar-card fade-up">
+            <h3 class="sidebar-card__title">Categories</h3>
+            <ul class="category-list">
+              {categories.map(cat => (
+                <li class="category-list__item">
+                  <span>{cat}</span>
+                  <span class="category-count">{allPosts.filter(p => p.data.category === cat).length}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="sidebar-card sidebar-card--cta fade-up">
+            <h3 class="sidebar-card__title">Stay Updated</h3>
+            <p style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--space-4);">
+              Get the latest articles delivered to your inbox.
+            </p>
+            <form class="newsletter-form" onsubmit="event.preventDefault()">
+              <input type="email" placeholder="your@email.com" class="newsletter-input" required />
+              <button type="submit" class="btn btn--primary btn--full">Subscribe</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </Container>
+  </Section>
+</Layout>
+
+<style>
+  .page-hero { position: relative; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; }
+  .grid-bg {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(var(--border) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    opacity: 0.4;
+  }
+  .gradient-orb--purple {
+    position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);
+    width: 500px; height: 500px; border-radius: 50%;
+    background: rgba(139, 92, 246, 0.1); filter: blur(80px);
+  }
+  .breadcrumbs { margin-bottom: var(--space-6); font-size: var(--text-sm); color: var(--text-muted); }
+  .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumbs a:hover { color: var(--primary); }
+  .breadcrumbs .sep { margin: 0 var(--space-2); }
+  .breadcrumbs .current { color: var(--text); }
+
+  .featured-post {
+    display: block; text-decoration: none; color: inherit;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-xl); padding: var(--space-10);
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .featured-post:hover { border-color: var(--primary); transform: translateY(-4px); }
+  .featured-post__meta {
+    display: flex; align-items: center; gap: var(--space-4);
+    margin-bottom: var(--space-4); font-size: var(--text-sm);
+  }
+  .featured-post__title { font-size: var(--text-h2); margin-bottom: var(--space-4); line-height: 1.2; }
+  .featured-post__excerpt { font-size: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin-bottom: var(--space-6); }
+  .featured-post__author { display: flex; align-items: center; gap: var(--space-3); font-weight: 500; }
+
+  .category-tag {
+    padding: var(--space-1) var(--space-3); border-radius: var(--radius-full);
+    background: rgba(139, 92, 246, 0.15); color: var(--primary);
+    font-size: var(--text-xs); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .category-tag--sm { font-size: 0.65rem; }
+  .date { color: var(--text-muted); }
+  .read-time { color: var(--text-muted); }
+
+  .avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--gradient-primary); display: flex; align-items: center;
+    justify-content: center; font-weight: 700; font-size: var(--text-sm); color: white;
+  }
+  .avatar--sm { width: 24px; height: 24px; font-size: 0.65rem; }
+
+  .blog-layout {
+    display: grid; grid-template-columns: 1fr 300px; gap: var(--space-8);
+    align-items: start;
+  }
+  .blog-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+  }
+  .blog-card {
+    display: flex; flex-direction: column; text-decoration: none; color: inherit;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: var(--space-6);
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .blog-card:hover { border-color: var(--primary); transform: translateY(-4px); }
+  .blog-card__meta {
+    display: flex; align-items: center; gap: var(--space-3);
+    margin-bottom: var(--space-3); font-size: var(--text-sm);
+  }
+  .blog-card__title { font-size: var(--text-h4); margin-bottom: var(--space-3); line-height: 1.3; }
+  .blog-card__excerpt { font-size: var(--text-sm); color: var(--text-secondary); flex: 1; margin-bottom: var(--space-4); }
+  .blog-card__footer {
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: var(--text-sm);
+  }
+  .blog-card__author { display: flex; align-items: center; gap: var(--space-2); }
+
+  .blog-sidebar { display: flex; flex-direction: column; gap: var(--space-6); position: sticky; top: var(--space-8); }
+  .sidebar-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: var(--space-6);
+  }
+  .sidebar-card--cta { border-color: var(--primary); }
+  .sidebar-card__title { font-size: var(--text-h4); margin-bottom: var(--space-4); }
+
+  .category-list { list-style: none; padding: 0; }
+  .category-list__item {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: var(--space-2) 0; border-bottom: 1px solid var(--border);
+    font-size: var(--text-sm); color: var(--text-secondary);
+  }
+  .category-list__item:last-child { border-bottom: none; }
+  .category-count {
+    background: var(--bg-elevated); padding: 2px 8px; border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+  }
+
+  .newsletter-form { display: flex; flex-direction: column; gap: var(--space-3); }
+  .newsletter-input {
+    padding: var(--space-3); border-radius: var(--radius-md);
+    border: 1px solid var(--border); background: var(--bg-elevated);
+    color: var(--text); font-size: var(--text-sm);
+  }
+  .newsletter-input:focus { outline: none; border-color: var(--primary); }
+  .btn { padding: var(--space-3) var(--space-6); border-radius: var(--radius-full); font-weight: 600; text-decoration: none; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+  .btn--primary { background: var(--gradient-primary); color: white; }
+  .btn--primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px var(--primary-glow); }
+  .btn--full { width: 100%; }
+
+  @media (max-width: 1024px) {
+    .blog-layout { grid-template-columns: 1fr; }
+    .blog-sidebar { position: static; flex-direction: row; flex-wrap: wrap; }
+    .sidebar-card { flex: 1; min-width: 280px; }
+  }
+  @media (max-width: 768px) {
+    .featured-post { padding: var(--space-6); }
+    .blog-grid { grid-template-columns: 1fr; }
+  }
+</style>
