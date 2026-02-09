@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/layout/Container.astro';
+import Section from '../components/layout/Section.astro';
+import GridBackground from '../components/effects/GridBackground';
+import GradientOrb from '../components/effects/GradientOrb';
+---
+
+<Layout>
+  <Section size="lg" style="position: relative; overflow: hidden; min-height: 100vh; display: flex; align-items: center;">
+    <GridBackground client:load />
+    <GradientOrb client:load color="rgba(139, 92, 246, 0.12)" size={600} top="10%" left="15%" />
+    <GradientOrb client:load color="rgba(34, 211, 238, 0.08)" size={500} top="50%" left="65%" delay={5} />
+
+    <Container>
+      <div style="text-align: center; position: relative; z-index: 1;">
+        <p class="section-label">Introducing NexusAI</p>
+
+        <h1 class="fade-up" style="margin-bottom: var(--space-6);">
+          <span class="gradient-text">Ship AI products</span><br />
+          that look as smart as they are
+        </h1>
+
+        <p class="fade-up delay-1" style="font-size: var(--text-body-lg); max-width: 600px; margin: 0 auto var(--space-8);">
+          The developer productivity platform that helps your team write better code, faster. Powered by AI, built for humans.
+        </p>
+
+        <div class="fade-up delay-2" style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+          <button data-theme-toggle style="
+            padding: var(--space-3) var(--space-6);
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: var(--text-sm);
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+          ">Toggle Dark/Light Mode</button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <Section>
+    <Container>
+      <h2 class="fade-up text-center" style="margin-bottom: var(--space-8);">Features that matter</h2>
+
+      <div class="stagger" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-6);">
+        {['Code Generation', 'Automated Testing', 'Intelligent Refactoring'].map((title, i) => (
+          <div class="fade-up" style={`
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-8);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+          `} data-tilt>
+            <h3 style="margin-bottom: var(--space-3);">{title}</h3>
+            <p style="font-size: var(--text-sm);">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+            </p>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <Section>
+    <Container>
+      <div class="fade-up text-center" style="padding: var(--space-16) 0;">
+        <p class="section-label">Get Started</p>
+        <h2 style="margin-bottom: var(--space-4);">
+          <span class="gradient-text">Ready to build the future?</span>
+        </h2>
+        <p style="max-width: 500px; margin: 0 auto; font-size: var(--text-body-lg);">
+          Join 10,000+ developers shipping smarter with NexusAI.
+        </p>
+      </div>
+    </Container>
+  </Section>
+</Layout>
+
+<script>
+  import { initTilt } from '../lib/tilt';
+  initTilt();
+  document.addEventListener('astro:after-swap', () => initTilt());
+</script>

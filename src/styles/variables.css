@@ -1,0 +1,150 @@
+/**
+ * NexusAI Design Tokens
+ * Violet + Cyan palette, dark-first
+ */
+
+:root {
+  /* ========== PRIMARY: Electric Violet ========== */
+  --primary: #8B5CF6;
+  --primary-hover: #7C3AED;
+  --primary-glow: rgba(139, 92, 246, 0.4);
+  --primary-50: #F3EEFF;
+  --primary-100: #E0D4FE;
+  --primary-200: #C6ADFD;
+  --primary-300: #A87FFD;
+  --primary-400: #8B5CF6;
+  --primary-500: #7C3AED;
+  --primary-600: #6D28D9;
+  --primary-700: #5B21B6;
+  --primary-900: #3B0764;
+
+  /* ========== ACCENT: Electric Cyan ========== */
+  --accent: #22D3EE;
+  --accent-hover: #06B6D4;
+  --accent-glow: rgba(34, 211, 238, 0.4);
+  --accent-50: #ECFEFF;
+  --accent-100: #CFFAFE;
+  --accent-200: #A5F3FC;
+  --accent-300: #67E8F9;
+  --accent-400: #22D3EE;
+  --accent-500: #06B6D4;
+  --accent-600: #0891B2;
+
+  /* ========== SEMANTIC ========== */
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --rose: #F43F5E;
+
+  /* ========== DARK THEME (DEFAULT) ========== */
+  --bg: #06060A;
+  --bg-elevated: #0F0F15;
+  --bg-card: #14141C;
+  --bg-card-hover: #1A1A25;
+  --text: #FAFAFA;
+  --text-secondary: #A1A1AA;
+  --text-muted: #71717A;
+  --border: #1E1E2E;
+  --border-hover: #2A2A3E;
+
+  /* ========== TYPOGRAPHY ========== */
+  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --text-display: clamp(3.5rem, 9vw, 6.5rem);
+  --text-h1: clamp(2.5rem, 6vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: 1.5rem;
+  --text-h4: 1.25rem;
+  --text-body: 1rem;
+  --text-body-lg: 1.125rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+
+  --leading-tight: 1.05;
+  --leading-body: 1.7;
+  --tracking-heading: -0.03em;
+  --tracking-mono: -0.01em;
+  --tracking-label: 0.1em;
+
+  /* ========== SPACING ========== */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ========== RADIUS ========== */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* ========== SHADOWS ========== */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 80px rgba(139, 92, 246, 0.3), 0 0 160px rgba(34, 211, 238, 0.1);
+
+  /* ========== ANIMATION ========== */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-entrance: 700ms;
+
+  /* ========== GRADIENTS ========== */
+  --gradient-hero: linear-gradient(135deg, #A87FFD 0%, #22D3EE 50%, #F43F5E 100%);
+  --gradient-primary: linear-gradient(135deg, #8B5CF6, #7C3AED);
+  --gradient-border: linear-gradient(90deg, transparent, #8B5CF6, #22D3EE, transparent);
+  --gradient-mesh: radial-gradient(600px circle at 20% 30%, rgba(139,92,246,0.12), transparent),
+                   radial-gradient(500px circle at 80% 70%, rgba(34,211,238,0.08), transparent),
+                   radial-gradient(400px circle at 50% 50%, rgba(244,63,94,0.05), transparent);
+
+  /* ========== Z-INDEX ========== */
+  --z-background: -1;
+  --z-default: 1;
+  --z-card: 10;
+  --z-nav: 100;
+  --z-modal: 1000;
+
+  /* ========== CONTAINER ========== */
+  --container-max: 1400px;
+  --container-padding: var(--space-6);
+}
+
+/* ========== LIGHT THEME ========== */
+[data-theme="light"] {
+  --bg: #FAFBFE;
+  --bg-elevated: #F0F1F5;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F5F5FA;
+  --text: #0F0F15;
+  --text-secondary: #4B5068;
+  --text-muted: #71717A;
+  --border: #E2E4EB;
+  --border-hover: #C8CAD5;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: var(--space-4);
+  }
+}

@@ -1,0 +1,16 @@
+---
+interface Props {
+  id?: string;
+  variant?: 'default' | 'elevated' | 'gradient';
+  size?: 'sm' | 'md' | 'lg';
+  class?: string;
+}
+
+const { id, variant = 'default', size = 'md', class: className = '' } = Astro.props;
+
+const sizeClass = size === 'sm' ? 'section--sm' : size === 'lg' ? 'section--lg' : '';
+const variantClass = variant === 'elevated' ? 'section--elevated' : '';
+---
+<section id={id} class={`section ${sizeClass} ${variantClass} ${className}`.trim()}>
+  <slot />
+</section>
