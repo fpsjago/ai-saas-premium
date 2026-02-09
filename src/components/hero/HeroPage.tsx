@@ -1,6 +1,7 @@
 import styles from './HeroPage.module.css';
 import GradientOrb from '../effects/GradientOrb';
 import GridBackground from '../effects/GridBackground';
+import ParticleField from '../effects/ParticleField';
 
 interface Breadcrumb {
   label: string;
@@ -18,7 +19,9 @@ export default function HeroPage({ title, description, breadcrumbs }: HeroPagePr
     <section className={styles.hero}>
       <div className={styles.bgEffects} aria-hidden="true">
         <GridBackground />
-        <GradientOrb color="rgba(139, 92, 246, 0.1)" size={500} top="30%" left="50%" />
+        <ParticleField count={100} />
+        <GradientOrb color="rgba(139, 92, 246, 0.12)" size={500} top="30%" left="20%" />
+        <GradientOrb color="rgba(34, 211, 238, 0.1)" size={400} top="60%" left="70%" delay={3} />
       </div>
 
       <div className={styles.inner}>
