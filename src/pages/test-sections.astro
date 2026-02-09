@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../layouts/Layout.astro';
+import Section from '../components/layout/Section.astro';
+import Container from '../components/layout/Container.astro';
+import HeroHome from '../components/hero/HeroHome';
+import HeroPage from '../components/hero/HeroPage';
+import HeroCTA from '../components/hero/HeroCTA';
+import BentoGrid from '../components/features/BentoGrid';
+import BentoCard from '../components/features/BentoCard';
+import FeatureShowcase from '../components/features/FeatureShowcase';
+import FeatureList from '../components/features/FeatureList';
+import StatsBar from '../components/social-proof/StatsBar';
+import TestimonialCarousel from '../components/social-proof/TestimonialCarousel';
+import TestimonialGrid from '../components/social-proof/TestimonialGrid';
+import LogoBar from '../components/social-proof/LogoBar';
+import PricingTable from '../components/pricing/PricingTable';
+---
+
+<BaseLayout title="Test Sections — NexusAI">
+  <!-- Hero Home -->
+  <HeroHome client:load />
+
+  <!-- Logo Bar -->
+  <Section size="sm">
+    <LogoBar
+      client:load
+      logos={["Vercel", "Stripe", "Supabase", "Planetscale", "Linear", "Figma", "GitHub", "Slack"]}
+    />
+  </Section>
+
+  <!-- Hero Page -->
+  <Section>
+    <HeroPage
+      client:load
+      title="Everything you need to ship AI"
+      description="A comprehensive developer platform with all the tools your team needs."
+      breadcrumbs={[{ label: "Home", href: "/" }, { label: "Features" }]}
+    />
+  </Section>
+
+  <!-- Hero CTA -->
+  <HeroCTA
+    client:load
+    headline="Start Building"
+    headlineGradient="The Future Today"
+    subtitle="Join thousands of developers shipping AI-powered products."
+    cta={{ text: "Get Started Free", href: "#" }}
+  />
+
+  <!-- Bento Grid -->
+  <Section>
+    <Container>
+      <div class="section-label fade-up">Features</div>
+      <h2 class="fade-up" style="margin-bottom: var(--space-10);">Everything in one platform</h2>
+    </Container>
+    <BentoGrid client:load>
+      <BentoCard client:load icon="🧠" title="AI Code Gen" description="Generate production-ready code with context-aware AI models." size="large" stat="10x" />
+      <BentoCard client:load icon="🧪" title="Smart Testing" description="Automated test generation and coverage analysis." size="small" />
+      <BentoCard client:load icon="📊" title="Analytics" description="Real-time performance and usage analytics dashboard." size="small" />
+      <BentoCard client:load icon="🔌" title="Integrations" description="Connect with your existing tools and workflows seamlessly." size="medium" />
+      <BentoCard client:load icon="🛡️" title="Security" description="Enterprise-grade security with SOC 2 compliance." size="small" />
+      <BentoCard client:load icon="🚀" title="Deploy" description="One-click deployments to any cloud provider." size="small" />
+    </BentoGrid>
+  </Section>
+
+  <!-- Feature Showcase -->
+  <Section>
+    <FeatureShowcase
+      client:load
+      label="AI Code Generation"
+      title="Write code 10x faster"
+      description="Our AI understands your codebase context and generates production-ready code that follows your team's patterns."
+      bullets={["Context-aware suggestions", "Multi-language support", "Auto-refactoring"]}
+    />
+    <FeatureShowcase
+      client:load
+      label="Smart Testing"
+      title="Test coverage on autopilot"
+      description="Automatically generate comprehensive test suites based on your code changes and user flows."
+      bullets={["Edge case detection", "Visual regression tests", "Performance benchmarks"]}
+      reversed={true}
+    />
+  </Section>
+
+  <!-- Feature List -->
+  <Section variant="elevated">
+    <Container>
+      <div class="text-center fade-up">
+        <div class="section-label" style="justify-content: center;">Capabilities</div>
+        <h2 style="margin-bottom: var(--space-10);">Built for modern teams</h2>
+      </div>
+    </Container>
+    <FeatureList
+      client:load
+      features={[
+        { icon: "⚡", title: "Lightning Fast", description: "Sub-second response times for all AI operations." },
+        { icon: "🔄", title: "Real-time Sync", description: "Collaborate with your team in real-time across projects." },
+        { icon: "🎯", title: "Precision AI", description: "Fine-tuned models that understand your specific domain." },
+        { icon: "📦", title: "Easy Setup", description: "Get started in minutes with zero configuration needed." },
+        { icon: "🌍", title: "Global CDN", description: "Deployed across 50+ edge locations worldwide." },
+        { icon: "🔒", title: "Enterprise Ready", description: "SOC 2, GDPR, and HIPAA compliant out of the box." },
+      ]}
+    />
+  </Section>
+
+  <!-- Stats Bar -->
+  <Section>
+    <Container>
+      <div class="text-center fade-up">
+        <div class="section-label" style="justify-content: center;">By the Numbers</div>
+        <h2 style="margin-bottom: var(--space-8);">Trusted by developers worldwide</h2>
+      </div>
+    </Container>
+    <StatsBar
+      client:load
+      stats={[
+        { value: 10000, suffix: "+", label: "Developers" },
+        { value: 99, suffix: ".9%", label: "Uptime" },
+        { value: 50, suffix: "M+", label: "API Calls / Day" },
+        { value: 140, suffix: "+", label: "Countries" },
+      ]}
+    />
+  </Section>
+
+  <!-- Testimonial Carousel -->
+  <Section variant="elevated">
+    <Container>
+      <div class="text-center fade-up">
+        <div class="section-label" style="justify-content: center;">Testimonials</div>
+        <h2 style="margin-bottom: var(--space-10);">Loved by developers</h2>
+      </div>
+    </Container>
+    <TestimonialCarousel
+      client:load
+      testimonials={[
+        { quote: "NexusAI transformed how our team builds AI products. We shipped 3x faster in the first month.", name: "Sarah Chen", role: "CTO, Acme Corp", initials: "SC" },
+        { quote: "The AI code generation is incredibly accurate. It understands our codebase patterns perfectly.", name: "Marcus Johnson", role: "Lead Engineer, TechFlow", initials: "MJ" },
+        { quote: "Best developer tool investment we've made. ROI was immediate and the team loves it.", name: "Priya Patel", role: "VP Engineering, DataStack", initials: "PP" },
+      ]}
+    />
+  </Section>
+
+  <!-- Testimonial Grid -->
+  <Section>
+    <Container>
+      <div class="text-center fade-up">
+        <div class="section-label" style="justify-content: center;">Reviews</div>
+        <h2 style="margin-bottom: var(--space-10);">What our users say</h2>
+      </div>
+    </Container>
+    <TestimonialGrid
+      client:load
+      testimonials={[
+        { quote: "Incredibly intuitive. Feels like having a senior engineer pair-programming with you 24/7.", name: "Alex Kim", role: "Fullstack Dev", initials: "AK", rating: 5 },
+        { quote: "We reduced our deployment time from hours to minutes. The CI/CD integration is seamless.", name: "Jordan Lee", role: "DevOps Lead, CloudNine", initials: "JL", rating: 5 },
+        { quote: "The smart testing feature alone is worth the subscription. Caught bugs we never would have found.", name: "Emma Wilson", role: "QA Manager, FinTech Inc", initials: "EW", rating: 5 },
+        { quote: "Outstanding support team. Every question answered within the hour.", name: "David Park", role: "Indie Developer", initials: "DP", rating: 4 },
+        { quote: "Finally, an AI tool that actually understands context. Not just autocomplete — real intelligence.", name: "Lisa Zhang", role: "ML Engineer, DeepAI", initials: "LZ", rating: 5 },
+        { quote: "Switched from 3 separate tools to NexusAI. Simpler, faster, and actually cheaper.", name: "Tom Brown", role: "Startup Founder", initials: "TB", rating: 5 },
+      ]}
+    />
+  </Section>
+
+  <!-- Pricing -->
+  <Section>
+    <Container>
+      <div class="text-center fade-up">
+        <div class="section-label" style="justify-content: center;">Pricing</div>
+        <h2 style="margin-bottom: var(--space-10);">Simple, transparent pricing</h2>
+      </div>
+    </Container>
+    <PricingTable
+      client:load
+      plans={[
+        {
+          name: "Starter",
+          description: "Perfect for individual developers",
+          monthlyPrice: 0,
+          annualPrice: 0,
+          features: [
+            { text: "1,000 AI generations / mo", included: true },
+            { text: "Basic analytics", included: true },
+            { text: "Community support", included: true },
+            { text: "Team collaboration", included: false },
+            { text: "Custom models", included: false },
+          ],
+          cta: "Get Started Free",
+          href: "#",
+        },
+        {
+          name: "Pro",
+          description: "For growing teams",
+          monthlyPrice: 49,
+          annualPrice: 39,
+          popular: true,
+          features: [
+            { text: "Unlimited AI generations", included: true },
+            { text: "Advanced analytics", included: true },
+            { text: "Priority support", included: true },
+            { text: "Team collaboration", included: true },
+            { text: "Custom models", included: false },
+          ],
+          cta: "Start Free Trial",
+          href: "#",
+        },
+        {
+          name: "Enterprise",
+          description: "For large organizations",
+          monthlyPrice: 199,
+          annualPrice: 159,
+          features: [
+            { text: "Unlimited everything", included: true },
+            { text: "Custom analytics", included: true },
+            { text: "Dedicated support", included: true },
+            { text: "Team collaboration", included: true },
+            { text: "Custom models", included: true },
+          ],
+          cta: "Contact Sales",
+          href: "#",
+        },
+      ]}
+    />
+  </Section>
+</BaseLayout>

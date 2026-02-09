@@ -1,0 +1,83 @@
+.card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  transition: transform var(--duration-normal) var(--ease-out-expo),
+              border-color var(--duration-normal) ease,
+              box-shadow var(--duration-normal) ease;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-border);
+  opacity: 0;
+  transition: opacity var(--duration-normal) ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 60px rgba(139, 92, 246, 0.1);
+}
+
+.card:hover::before { opacity: 1; }
+
+/* Size variants */
+.small { grid-column: span 1; grid-row: span 1; }
+.medium { grid-column: span 2; grid-row: span 1; }
+.large { grid-column: span 2; grid-row: span 2; }
+.wide { grid-column: span 4; grid-row: span 1; }
+
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(139, 92, 246, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: var(--space-4);
+  transition: transform var(--duration-normal) ease;
+}
+
+.card:hover .icon { transform: scale(1.1); }
+
+.title {
+  font-size: var(--text-h3);
+  margin-bottom: var(--space-2);
+  color: var(--text);
+}
+
+.description {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-body);
+}
+
+.stat {
+  margin-top: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .medium, .large, .wide { grid-column: span 2; }
+}
+
+@media (max-width: 480px) {
+  .medium, .large, .wide { grid-column: span 1; grid-row: span 1; }
+}

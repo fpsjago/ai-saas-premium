@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/layout/Navigation';
+import Footer from '../components/layout/Footer';
+import ScrollProgress from '../components/effects/ScrollProgress';
+import ParticleField from '../components/effects/ParticleField';
+import Button from '../components/ui/Button';
+import Badge from '../components/ui/Badge';
+import Card from '../components/ui/Card';
+import TerminalWindow from '../components/ui/TerminalWindow';
+import GradientText from '../components/ui/GradientText';
+import SectionLabel from '../components/ui/SectionLabel';
+import Accordion from '../components/ui/Accordion';
+import DarkModeToggle from '../components/ui/DarkModeToggle';
+---
+
+<Layout title="UI Test Page — NexusAI">
+  <ScrollProgress client:load />
+  <Navigation client:load />
+
+  <main style="padding-top: 100px; max-width: 1200px; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+
+    <!-- BUTTONS -->
+    <section style="margin-bottom: 4rem;">
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-h2); color: var(--text); margin-bottom: 2rem; letter-spacing: var(--tracking-heading);">Buttons</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 1.5rem;">
+        <Button client:load variant="primary" size="sm">Primary SM</Button>
+        <Button client:load variant="primary" size="md">Primary MD</Button>
+        <Button client:load variant="primary" size="lg">Primary LG</Button>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 1.5rem;">
+        <Button client:load variant="secondary">Secondary</Button>
+        <Button client:load variant="accent">Accent</Button>
+        <Button client:load variant="ghost">Ghost</Button>
+        <Button client:load variant="outline">Outline</Button>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <Button client:load variant="primary" loading={true}>Loading</Button>
+        <Button client:load variant="primary" disabled={true}>Disabled</Button>
+        <Button client:load variant="outline">With Icon</Button>
+      </div>
+    </section>
+
+    <!-- BADGES -->
+    <section style="margin-bottom: 4rem;">
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-h2); color: var(--text); margin-bottom: 2rem; letter-spacing: var(--tracking-heading);">Badges</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <Badge client:load variant="primary">Primary</Badge>
+        <Badge client:load variant="secondary">Secondary</Badge>
+        <Badge client:load variant="success">Success</Badge>
+        <Badge client:load variant="warning">Warning</Badge>
+        <Badge client:load variant="info">Info</Badge>
+        <Badge client:load variant="primary" pulse={true}>Live</Badge>
+      </div>
+    </section>
+
+    <!-- CARDS -->
+    <section style="margin-bottom: 4rem;">
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-h2); color: var(--text); margin-bottom: 2rem; letter-spacing: var(--tracking-heading);">Cards</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <Card client:load variant="glass">
+          <h3 style="color: var(--text); font-family: var(--font-heading); margin-bottom: 0.5rem;">Glass Card</h3>
+          <p style="color: var(--text-secondary); font-size: var(--text-sm);">Glassmorphic effect with backdrop blur and border glow on hover.</p>
+        </Card>
+        <Card client:load variant="solid">
+          <h3 style="color: var(--text); font-family: var(--font-heading); margin-bottom: 0.5rem;">Solid Card</h3>
+          <p style="color: var(--text-secondary); font-size: var(--text-sm);">Solid background with subtle hover lift and border transition.</p>
+        </Card>
+        <Card client:load variant="elevated">
+          <h3 style="color: var(--text); font-family: var(--font-heading); margin-bottom: 0.5rem;">Elevated Card</h3>
+          <p style="color: var(--text-secondary); font-size: var(--text-sm);">Elevated surface with cyan glow on hover.</p>
+        </Card>
+      </div>
+    </section>
+
+    <!-- TERMINAL -->
+    <section style="margin-bottom: 4rem;">
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-h2); color: var(--text); margin-bottom: 2rem; letter-spacing: var(--tracking-heading);">Terminal Window</h2>
+      <TerminalWindow client:load title="nexus-cli">
+        <div>
+          <span style="color: var(--success);">$</span> nexus deploy --production<br/>
+          <span style="color: var(--text-muted);">⠋ Building project...</span><br/>
+          <span style="color: var(--text-muted);">✓ Compiled 847 modules</span><br/>
+          <span style="color: var(--success);">✓ Deployed to production</span><br/>
+          <span style="color: var(--accent);">→ https://app.nexusai.dev</span>
+        </div>
+      </TerminalWindow>
+    </section>
+
+    <!-- GRADIENT TEXT -->
+    <section style="margin-bottom: 4rem;">
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-h2); color: var(--text); margin-bottom: 2rem; letter-spacing: var(--tracking-heading);">Gradient Text</h2>
+      <GradientText client:load as="h2">
+        <span style="font-family: var(--font-heading); font-size: var(--text-h1); font-weight: 800; letter-spacing: var(--tracking-heading);">Build the Future with AI</span>
+      </GradientText>
+    </section>
+
+    <!-- SECTION LABEL -->
+    <section style="margin-bottom: 4rem;">
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-h2); color: var(--text); margin-bottom: 2rem; letter-spacing: var(--tracking-heading);">Section Label</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+        <SectionLabel client:load>Features</SectionLabel>
+        <SectionLabel client:load pulse={true}>Live Demo</SectionLabel>
+      </div>
+    </section>
+
+    <!-- ACCORDION -->
+    <section style="margin-bottom: 4rem;">
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-h2); color: var(--text); margin-bottom: 2rem; letter-spacing: var(--tracking-heading);">Accordion</h2>
+      <Accordion client:load items={[
+        { id: '1', title: 'What is NexusAI?', content: 'NexusAI is an AI-powered developer productivity platform that helps teams ship products faster with intelligent code assistance, automated testing, and seamless deployment.' },
+        { id: '2', title: 'How does pricing work?', content: 'We offer flexible pricing plans starting from a free tier for individual developers. Team and enterprise plans include additional features like advanced analytics, priority support, and custom integrations.' },
+        { id: '3', title: 'Can I use it with my existing tools?', content: 'Yes! NexusAI integrates with all major development tools including GitHub, GitLab, VS Code, JetBrains IDEs, Slack, and more. Our API allows custom integrations for any workflow.' },
+      ]} />
+    </section>
+
+    <!-- DARK MODE TOGGLE (standalone) -->
+    <section style="margin-bottom: 4rem;">
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-h2); color: var(--text); margin-bottom: 2rem; letter-spacing: var(--tracking-heading);">Dark Mode Toggle</h2>
+      <DarkModeToggle client:load />
+    </section>
+
+    <!-- PARTICLE FIELD -->
+    <section style="margin-bottom: 4rem; position: relative; min-height: 300px; border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;">
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-h2); color: var(--text); margin-bottom: 2rem; letter-spacing: var(--tracking-heading); position: relative; z-index: 1; padding: 2rem;">Particle Field</h2>
+      <ParticleField client:load />
+    </section>
+
+    <!-- Spacer for scroll testing -->
+    <div style="height: 50vh;"></div>
+
+  </main>
+
+  <Footer client:load />
+</Layout>

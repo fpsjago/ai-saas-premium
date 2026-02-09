@@ -1,0 +1,13 @@
+.bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  z-index: calc(var(--z-nav) + 1);
+  transition: width 50ms linear;
+  will-change: width;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bar { transition: none; }
+}

@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/layout/Container.astro';
+import Section from '../components/layout/Section.astro';
+import Navigation from '../components/layout/Navigation';
+import Footer from '../components/layout/Footer';
+import ScrollProgress from '../components/effects/ScrollProgress';
+import HeroPage from '../components/hero/HeroPage';
+---
+
+<Layout title="Contact — NexusAI" description="Get in touch with the NexusAI team. We'd love to hear from you.">
+  <ScrollProgress client:load />
+  <Navigation client:load links={[
+    { label: "Features", href: "/ai-saas-premium/features/" },
+    { label: "Pricing", href: "/ai-saas-premium/pricing/" },
+    { label: "About", href: "/ai-saas-premium/about/" },
+    { label: "Contact", href: "/ai-saas-premium/contact/", active: true },
+  ]} />
+
+  <!-- Hero -->
+  <HeroPage client:load
+    title="Let's talk"
+    description="Have a question, feedback, or want to explore enterprise options? We'd love to hear from you."
+    breadcrumbs={[{ label: "Home", href: "/ai-saas-premium/" }, { label: "Contact" }]}
+  />
+
+  <!-- Contact Form -->
+  <Section>
+    <Container>
+      <div style="max-width: 640px; margin: 0 auto;">
+        <form class="fade-up" style="display: flex; flex-direction: column; gap: var(--space-6);" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Message Sent! ✓'; this.querySelector('button').style.background='var(--success)';">
+          <div>
+            <label for="name" style="display: block; font-size: var(--text-sm); font-weight: 600; margin-bottom: var(--space-2);">Name</label>
+            <input id="name" type="text" required placeholder="Your full name" style="width: 100%; padding: var(--space-3) var(--space-4); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); color: var(--text-primary); font-size: var(--text-body); outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--violet-500)'" onblur="this.style.borderColor='var(--border)'" />
+          </div>
+          <div>
+            <label for="email" style="display: block; font-size: var(--text-sm); font-weight: 600; margin-bottom: var(--space-2);">Email</label>
+            <input id="email" type="email" required placeholder="you@company.com" style="width: 100%; padding: var(--space-3) var(--space-4); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); color: var(--text-primary); font-size: var(--text-body); outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--violet-500)'" onblur="this.style.borderColor='var(--border)'" />
+          </div>
+          <div>
+            <label for="message" style="display: block; font-size: var(--text-sm); font-weight: 600; margin-bottom: var(--space-2);">Message</label>
+            <textarea id="message" required rows="6" placeholder="Tell us how we can help..." style="width: 100%; padding: var(--space-3) var(--space-4); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); color: var(--text-primary); font-size: var(--text-body); outline: none; resize: vertical; font-family: inherit; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--violet-500)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+          </div>
+          <button type="submit" style="padding: var(--space-3) var(--space-8); background: var(--gradient-primary); color: white; border-radius: var(--radius-full); font-weight: 700; font-size: var(--text-sm); cursor: pointer; border: none; transition: transform 0.2s, box-shadow 0.2s; align-self: flex-start;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">Send Message</button>
+        </form>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Support Options -->
+  <Section variant="elevated">
+    <Container>
+      <div class="text-center fade-up">
+        <p class="section-label" style="justify-content: center;">Support</p>
+        <h2 style="margin-bottom: var(--space-10);">Other ways to reach us</h2>
+      </div>
+      <div class="stagger" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6);">
+        <div class="fade-up" style="text-align: center; padding: var(--space-8); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); transition: transform 0.3s ease, border-color 0.3s ease;">
+          <div style="font-size: 2rem; margin-bottom: var(--space-4);">📧</div>
+          <h3 style="font-size: var(--text-body); margin-bottom: var(--space-2);">Email Support</h3>
+          <p style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--space-4);">Get a response within 4 hours during business hours.</p>
+          <a href="mailto:support@nexusai.dev" style="font-size: var(--text-sm); color: var(--violet-400); text-decoration: none; font-weight: 600;">support@nexusai.dev</a>
+        </div>
+        <div class="fade-up" style="text-align: center; padding: var(--space-8); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); transition: transform 0.3s ease, border-color 0.3s ease;">
+          <div style="font-size: 2rem; margin-bottom: var(--space-4);">💬</div>
+          <h3 style="font-size: var(--text-body); margin-bottom: var(--space-2);">Live Chat</h3>
+          <p style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--space-4);">Chat with our team in real-time on Discord.</p>
+          <a href="#" style="font-size: var(--text-sm); color: var(--violet-400); text-decoration: none; font-weight: 600;">Join our Discord</a>
+        </div>
+        <div class="fade-up" style="text-align: center; padding: var(--space-8); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); transition: transform 0.3s ease, border-color 0.3s ease;">
+          <div style="font-size: 2rem; margin-bottom: var(--space-4);">📚</div>
+          <h3 style="font-size: var(--text-body); margin-bottom: var(--space-2);">Documentation</h3>
+          <p style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--space-4);">Browse guides, tutorials, and API references.</p>
+          <a href="#" style="font-size: var(--text-sm); color: var(--violet-400); text-decoration: none; font-weight: 600;">Visit Docs</a>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <Footer client:load />
+</Layout>
+
+<style>
+  @media (max-width: 768px) {
+    div[style*="grid-template-columns: repeat(3"] {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>

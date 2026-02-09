@@ -1,0 +1,61 @@
+.card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  transition: transform var(--duration-normal) var(--ease-out-expo),
+              box-shadow var(--duration-normal) var(--ease-out-quad),
+              border-color var(--duration-normal) var(--ease-out-quad);
+}
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.glass {
+  background: rgba(20, 20, 28, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+}
+.glass:hover {
+  border-color: rgba(139,92,246,0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 0 60px rgba(139,92,246,0.1);
+}
+
+.solid {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+.solid:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+.elevated {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+.elevated:hover {
+  border-color: rgba(34,211,238,0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 40px rgba(34,211,238,0.08);
+}
+
+/* Gradient top border on hover */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-border);
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-out-quad);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+.card:hover::before { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .card { transition-duration: 0.01ms !important; }
+  .card:hover { transform: none; }
+}

@@ -1,0 +1,16 @@
+.gradient {
+  background: var(--gradient-hero);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shift 6s ease-in-out infinite;
+  display: inline;
+}
+@keyframes shift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gradient { animation: none; }
+}

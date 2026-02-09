@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/layout/Container.astro';
+import Section from '../components/layout/Section.astro';
+import Navigation from '../components/layout/Navigation';
+import Footer from '../components/layout/Footer';
+import ScrollProgress from '../components/effects/ScrollProgress';
+import HeroPage from '../components/hero/HeroPage';
+import BentoGrid from '../components/features/BentoGrid';
+import BentoCard from '../components/features/BentoCard';
+import FeatureShowcase from '../components/features/FeatureShowcase';
+import StatsBar from '../components/social-proof/StatsBar';
+import TestimonialGrid from '../components/social-proof/TestimonialGrid';
+import GradientOrb from '../components/effects/GradientOrb';
+
+import { detailedFeatures, featureShowcases } from '../data/features';
+import { featureTestimonials } from '../data/testimonials';
+---
+
+<Layout title="Features — NexusAI" description="Explore NexusAI's powerful features: AI code generation, smart testing, real-time collaboration, advanced analytics, and more.">
+  <ScrollProgress client:load />
+  <Navigation client:load links={[
+    { label: "Features", href: "/ai-saas-premium/features/", active: true },
+    { label: "Pricing", href: "/ai-saas-premium/pricing/" },
+    { label: "About", href: "/ai-saas-premium/about/" },
+    { label: "Contact", href: "/ai-saas-premium/contact/" },
+  ]} />
+
+  <!-- Hero -->
+  <HeroPage client:load
+    title="Everything you need to ship AI"
+    description="A comprehensive developer platform with all the tools your team needs to build, test, and deploy AI-powered applications."
+    breadcrumbs={[{ label: "Home", href: "/ai-saas-premium/" }, { label: "Features" }]}
+  />
+
+  <!-- Section Header + Intro -->
+  <Section>
+    <Container>
+      <div class="text-center fade-up">
+        <p class="section-label" style="justify-content: center;">Platform Overview</p>
+        <h2 style="margin-bottom: var(--space-4);">Built for modern AI teams</h2>
+        <p style="max-width: 640px; margin: 0 auto var(--space-10); color: var(--text-secondary); font-size: var(--text-body-lg);">From code generation to deployment, NexusAI covers every step of the AI development lifecycle with tools that actually make your team faster.</p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Bento Grid (8 detailed features) -->
+  <Section>
+    <Container>
+      <div class="text-center fade-up">
+        <p class="section-label" style="justify-content: center;">Features</p>
+        <h2 style="margin-bottom: var(--space-10);">Powerful tools, one platform</h2>
+      </div>
+    </Container>
+    <BentoGrid client:load>
+      {detailedFeatures.map((f, i) => (
+        <BentoCard client:load icon={f.icon} title={f.title} description={f.description} stat={f.stat} size={i === 0 ? "large" : i === 7 ? "wide" : i % 3 === 0 ? "medium" : "small"} />
+      ))}
+    </BentoGrid>
+  </Section>
+
+  <!-- Feature Showcases (3 deep dives) -->
+  {featureShowcases.map((showcase) => (
+    <Section>
+      <FeatureShowcase client:load {...showcase} />
+    </Section>
+  ))}
+
+  <!-- Stats Bar -->
+  <Section>
+    <Container>
+      <div class="text-center fade-up">
+        <p class="section-label" style="justify-content: center;">Performance</p>
+        <h2 style="margin-bottom: var(--space-8);">Numbers that speak for themselves</h2>
+      </div>
+    </Container>
+    <StatsBar client:load stats={[
+      { value: 10, suffix: "x", label: "Faster Development" },
+      { value: 95, suffix: "%", label: "Test Coverage" },
+      { value: 94, suffix: "ms", label: "Avg Deploy Time" },
+      { value: 40, suffix: "+", label: "Languages Supported" },
+    ]} />
+  </Section>
+
+  <!-- Testimonial Grid -->
+  <Section variant="elevated">
+    <Container>
+      <div class="text-center fade-up">
+        <p class="section-label" style="justify-content: center;">What Developers Say</p>
+        <h2 style="margin-bottom: var(--space-10);">Trusted by engineering teams</h2>
+      </div>
+    </Container>
+    <TestimonialGrid client:load testimonials={featureTestimonials} />
+  </Section>
+
+  <!-- CTA Inline -->
+  <Section>
+    <Container>
+      <div class="fade-up" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-6); padding: var(--space-8) var(--space-10); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); backdrop-filter: blur(20px);">
+        <div>
+          <h3 style="margin-bottom: var(--space-2);">Ready to supercharge your workflow?</h3>
+          <p style="color: var(--text-secondary); margin: 0;">Start building with NexusAI today — free forever for individual developers.</p>
+        </div>
+        <a href="#" style="display: inline-flex; align-items: center; padding: var(--space-3) var(--space-8); background: var(--gradient-primary); color: white; border-radius: var(--radius-full); font-weight: 700; font-size: var(--text-sm); text-decoration: none; white-space: nowrap;">Get Started Free</a>
+      </div>
+    </Container>
+  </Section>
+
+  <Footer client:load />
+</Layout>

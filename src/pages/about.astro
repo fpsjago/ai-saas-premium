@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/layout/Container.astro';
+import Section from '../components/layout/Section.astro';
+import Navigation from '../components/layout/Navigation';
+import Footer from '../components/layout/Footer';
+import ScrollProgress from '../components/effects/ScrollProgress';
+import HeroPage from '../components/hero/HeroPage';
+import StatsBar from '../components/social-proof/StatsBar';
+import TestimonialCarousel from '../components/social-proof/TestimonialCarousel';
+
+import { team } from '../data/team';
+import { timeline } from '../data/timeline';
+import { carouselTestimonials } from '../data/testimonials';
+---
+
+<Layout title="About — NexusAI" description="Learn about NexusAI's mission to make AI development accessible to every team. Meet the team building the future.">
+  <ScrollProgress client:load />
+  <Navigation client:load links={[
+    { label: "Features", href: "/ai-saas-premium/features/" },
+    { label: "Pricing", href: "/ai-saas-premium/pricing/" },
+    { label: "About", href: "/ai-saas-premium/about/", active: true },
+    { label: "Contact", href: "/ai-saas-premium/contact/" },
+  ]} />
+
+  <!-- Hero -->
+  <HeroPage client:load
+    title="Building the future of AI development"
+    description="We're on a mission to make AI-powered software development accessible to every team, everywhere."
+    breadcrumbs={[{ label: "Home", href: "/ai-saas-premium/" }, { label: "About" }]}
+  />
+
+  <!-- Mission + Story -->
+  <Section>
+    <Container>
+      <div class="fade-up" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center;">
+        <div>
+          <p class="section-label">Our Mission</p>
+          <h2 style="margin-bottom: var(--space-6);">Making AI development <span class="gradient-text">accessible to everyone</span></h2>
+          <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--text-body-lg); line-height: 1.7;">We believe the next generation of software will be AI-powered — and the teams building it deserve tools that are just as intelligent as the products they create.</p>
+          <p style="color: var(--text-secondary); line-height: 1.7;">Founded in 2022 by engineers from Stripe and Google DeepMind, NexusAI started with a simple observation: building AI products was unnecessarily hard. Too many tools, too much complexity, too little time. We set out to change that.</p>
+        </div>
+        <div style="position: relative; padding: var(--space-10); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); backdrop-filter: blur(20px);">
+          <blockquote style="font-size: var(--text-xl); font-weight: 600; line-height: 1.6; margin: 0; font-style: italic;">
+            "We're not just building tools — we're building the platform that will power the next million AI applications."
+          </blockquote>
+          <p style="margin-top: var(--space-4); color: var(--text-secondary); font-size: var(--text-sm);">— Alex Rivera, Co-founder & CEO</p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Stats -->
+  <Section>
+    <Container>
+      <div class="text-center fade-up">
+        <p class="section-label" style="justify-content: center;">Company</p>
+        <h2 style="margin-bottom: var(--space-8);">NexusAI by the numbers</h2>
+      </div>
+    </Container>
+    <StatsBar client:load stats={[
+      { value: 10000, suffix: "+", label: "Active Teams" },
+      { value: 45, label: "Team Members" },
+      { value: 12, label: "Countries" },
+      { value: 32, suffix: "M", prefix: "$", label: "Total Funding" },
+    ]} />
+  </Section>
+
+  <!-- Team Grid -->
+  <Section variant="elevated">
+    <Container>
+      <div class="text-center fade-up">
+        <p class="section-label" style="justify-content: center;">Our Team</p>
+        <h2 style="margin-bottom: var(--space-10);">Meet the people behind NexusAI</h2>
+      </div>
+      <div class="stagger" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6);">
+        {team.map((member) => (
+          <div class="fade-up" style="text-align: center; padding: var(--space-8) var(--space-4); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); transition: transform 0.3s ease, border-color 0.3s ease;">
+            <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4); font-weight: 700; font-size: var(--text-xl); color: white;">{member.initials}</div>
+            <h3 style="font-size: var(--text-body); margin-bottom: var(--space-1);">{member.name}</h3>
+            <p style="font-size: var(--text-sm); color: var(--violet-400); margin-bottom: var(--space-3);">{member.role}</p>
+            <p style="font-size: var(--text-xs); color: var(--text-tertiary); line-height: 1.5;">{member.bio}</p>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Timeline -->
+  <Section>
+    <Container>
+      <div class="text-center fade-up">
+        <p class="section-label" style="justify-content: center;">Our Journey</p>
+        <h2 style="margin-bottom: var(--space-12);">Key milestones</h2>
+      </div>
+      <div style="position: relative; max-width: 700px; margin: 0 auto;">
+        <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--border); transform: translateX(-50%);" aria-hidden="true"></div>
+        {timeline.map((item, i) => (
+          <div class="fade-up" style={`display: flex; align-items: flex-start; gap: var(--space-6); margin-bottom: var(--space-10); ${i % 2 === 0 ? 'flex-direction: row' : 'flex-direction: row-reverse'};`}>
+            <div style={`flex: 1; padding: var(--space-6); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); text-align: ${i % 2 === 0 ? 'right' : 'left'};`}>
+              <span style="font-size: var(--text-xs); color: var(--violet-400); font-weight: 600;">{item.date}</span>
+              <h3 style="font-size: var(--text-body); margin: var(--space-2) 0;">{item.title}</h3>
+              <p style="font-size: var(--text-sm); color: var(--text-secondary); margin: 0;">{item.description}</p>
+            </div>
+            <div style="width: 16px; height: 16px; border-radius: 50%; background: var(--gradient-primary); flex-shrink: 0; margin-top: var(--space-6); position: relative; z-index: 1;" aria-hidden="true"></div>
+            <div style="flex: 1;"></div>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Testimonials -->
+  <Section variant="elevated">
+    <Container>
+      <div class="text-center fade-up">
+        <p class="section-label" style="justify-content: center;">What People Say</p>
+        <h2 style="margin-bottom: var(--space-10);">Loved by the community</h2>
+      </div>
+    </Container>
+    <TestimonialCarousel client:load testimonials={carouselTestimonials} />
+  </Section>
+
+  <!-- CTA Inline -->
+  <Section>
+    <Container>
+      <div class="fade-up" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-6); padding: var(--space-8) var(--space-10); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); backdrop-filter: blur(20px);">
+        <div>
+          <h3 style="margin-bottom: var(--space-2);">Join our team</h3>
+          <p style="color: var(--text-secondary); margin: 0;">We're hiring across engineering, design, and sales. Help us shape the future of AI development.</p>
+        </div>
+        <a href="/ai-saas-premium/contact/" style="display: inline-flex; align-items: center; padding: var(--space-3) var(--space-8); background: var(--gradient-primary); color: white; border-radius: var(--radius-full); font-weight: 700; font-size: var(--text-sm); text-decoration: none; white-space: nowrap;">View Open Roles</a>
+      </div>
+    </Container>
+  </Section>
+
+  <Footer client:load />
+</Layout>
+
+<style>
+  @media (max-width: 768px) {
+    div[style*="grid-template-columns: 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+    div[style*="grid-template-columns: repeat(4"] {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    div[style*="flex-direction: row-reverse"] {
+      flex-direction: row !important;
+    }
+  }
+</style>

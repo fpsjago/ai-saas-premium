@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ParticleField from '../components/effects/ParticleField';
+import GradientOrb from '../components/effects/GradientOrb';
+import GridBackground from '../components/effects/GridBackground';
+---
+
+<Layout title="404 — Page Not Found | NexusAI" description="The page you're looking for doesn't exist.">
+  <main style="position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; text-align: center; padding: var(--space-8);">
+    <GridBackground client:load />
+    <ParticleField client:load count={40} />
+    <GradientOrb client:load color="rgba(139, 92, 246, 0.15)" size={500} top="20%" left="30%" />
+    <GradientOrb client:load color="rgba(34, 211, 238, 0.1)" size={400} top="60%" left="60%" delay={4} />
+
+    <div style="position: relative; z-index: 1;">
+      <h1 style="font-size: clamp(6rem, 15vw, 12rem); font-weight: 800; line-height: 1; margin-bottom: var(--space-4);">
+        <span class="gradient-text">404</span>
+      </h1>
+      <p style="font-size: var(--text-xl); color: var(--text-secondary); margin-bottom: var(--space-2);">Page not found</p>
+      <p style="font-size: var(--text-body); color: var(--text-tertiary); margin-bottom: var(--space-8); max-width: 400px; margin-left: auto; margin-right: auto;">The page you're looking for doesn't exist or has been moved.</p>
+      <a href="/ai-saas-premium/" style="display: inline-flex; align-items: center; gap: var(--space-2); padding: var(--space-3) var(--space-8); background: var(--gradient-primary); color: white; border-radius: var(--radius-full); font-weight: 700; font-size: var(--text-sm); text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">← Back to Home</a>
+    </div>
+  </main>
+</Layout>
