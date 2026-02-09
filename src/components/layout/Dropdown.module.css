@@ -48,10 +48,11 @@
 
 .menu {
   position: absolute;
-  top: calc(100% + 12px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   min-width: 200px;
+  padding-top: 8px;
   z-index: calc(var(--z-nav) + 1);
   animation: dropdownSlide var(--duration-normal) var(--ease-out-expo);
 }

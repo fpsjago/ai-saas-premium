@@ -43,7 +43,7 @@ export default function Footer({ className = '' }: { className?: string }) {
             <p className={styles.columnTitle}>Resources</p>
             <ul className={styles.columnLinks}>
               <li><a href="/ai-saas-premium/docs/" className={styles.columnLink}>Documentation</a></li>
-              <li><a href="/ai-saas-premium/docs/" className={styles.columnLink}>API Reference</a></li>
+              <li><a href="/ai-saas-premium/docs/#api" className={styles.columnLink}>API Reference</a></li>
               <li><a href="/ai-saas-premium/blog/" className={styles.columnLink}>Blog</a></li>
               <li><a href="https://discord.gg/nexusai" className={styles.columnLink}>Community</a></li>
             </ul>
