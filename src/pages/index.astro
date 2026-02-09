@@ -16,8 +16,7 @@ import TestimonialCarousel from '../components/social-proof/TestimonialCarousel'
 import PricingTable from '../components/pricing/PricingTable';
 import GradientOrb from '../components/effects/GradientOrb';
 import GridBackground from '../components/effects/GridBackground';
-
-import ParallaxImage from '../components/effects/ParallaxImage';
+import ParticleField from '../components/effects/ParticleField';
 
 import { homeFeatures, featureShowcases } from '../data/features';
 import { carouselTestimonials } from '../data/testimonials';
@@ -54,14 +53,9 @@ import { plans } from '../data/pricing';
 
   <!-- Bento Grid -->
   <Section>
-    <ParallaxImage 
-      client:load
-      src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80"
-      alt="Data center servers"
-      speed={0.3}
-      opacity={0.08}
-      blur={2}
-    />
+    <ParticleField client:load count={60} />
+    <GradientOrb client:load color="rgba(139, 92, 246, 0.15)" size={600} top="20%" left="10%" />
+    <GradientOrb client:load color="rgba(34, 211, 238, 0.1)" size={500} top="60%" left="70%" delay={3} />
     <Container>
       <div class="text-center fade-up">
         <p class="section-label" style="justify-content: center;">Platform</p>
@@ -77,14 +71,6 @@ import { plans } from '../data/pricing';
 
   <!-- Feature Showcases -->
   <Section>
-    <ParallaxImage 
-      client:load
-      src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80"
-      alt="Digital technology background"
-      speed={0.25}
-      opacity={0.07}
-      blur={4}
-    />
     <FeatureShowcase client:load {...featureShowcases[0]} />
   </Section>
   <Section>
@@ -109,14 +95,6 @@ import { plans } from '../data/pricing';
 
   <!-- Testimonial Carousel -->
   <Section variant="elevated">
-    <ParallaxImage 
-      client:load
-      src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1920&q=80"
-      alt="Abstract technology network"
-      speed={0.4}
-      opacity={0.12}
-      blur={3}
-    />
     <Container>
       <div class="text-center fade-up">
         <p class="section-label" style="justify-content: center;">Testimonials</p>
@@ -128,14 +106,6 @@ import { plans } from '../data/pricing';
 
   <!-- Pricing Preview -->
   <Section id="pricing">
-    <ParallaxImage 
-      client:load
-      src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1920&q=80"
-      alt="AI neural network visualization"
-      speed={0.35}
-      opacity={0.1}
-      blur={2}
-    />
     <Container>
       <div class="text-center fade-up">
         <p class="section-label" style="justify-content: center;">Pricing</p>
