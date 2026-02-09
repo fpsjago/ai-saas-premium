@@ -18,6 +18,51 @@
   background: rgba(250, 251, 254, 0.95);
 }
 .open { opacity: 1; visibility: visible; }
+
+.closeButton {
+  position: absolute;
+  top: var(--space-6);
+  right: var(--space-6);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: var(--radius-full);
+  color: var(--text);
+  cursor: pointer;
+  transition: all var(--duration-fast) ease;
+  opacity: 0;
+  transform: scale(0.8) rotate(-90deg);
+  z-index: 10;
+}
+
+.open .closeButton {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+  transition: opacity var(--duration-normal) var(--ease-out-expo),
+              transform var(--duration-normal) var(--ease-out-expo),
+              background var(--duration-fast) ease,
+              border-color var(--duration-fast) ease;
+  transition-delay: 400ms;
+}
+
+.closeButton:hover {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: rgba(139, 92, 246, 0.4);
+  transform: scale(1.05);
+}
+
+.closeButton:active {
+  transform: scale(0.95);
+}
+
+.closeButton:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
 .link {
   color: var(--text);
   text-decoration: none;
