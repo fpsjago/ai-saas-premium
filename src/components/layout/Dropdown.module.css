@@ -1,0 +1,157 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color var(--duration-fast) ease;
+  position: relative;
+}
+
+.trigger:hover {
+  color: var(--text);
+}
+
+.trigger::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width var(--duration-normal) ease;
+}
+
+.trigger:hover::after {
+  width: calc(100% - 18px);
+}
+
+.arrow {
+  transition: transform var(--duration-fast) ease;
+  opacity: 0.7;
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 200px;
+  z-index: calc(var(--z-nav) + 1);
+  animation: dropdownSlide var(--duration-normal) var(--ease-out-expo);
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.menuInner {
+  background: rgba(6, 6, 10, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(139, 92, 246, 0.1) inset;
+}
+
+[data-theme="light"] .menuInner {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(139, 92, 246, 0.15);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(139, 92, 246, 0.08) inset;
+}
+
+.menuLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: all var(--duration-fast) ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.menuLink::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity var(--duration-fast) ease;
+}
+
+.menuLink:hover {
+  color: white;
+  transform: translateX(4px);
+}
+
+.menuLink:hover::before {
+  opacity: 0.15;
+}
+
+.menuLink:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.menuLink span,
+.menuLink svg {
+  position: relative;
+  z-index: 1;
+}
+
+.externalIcon {
+  opacity: 0.5;
+  transition: opacity var(--duration-fast) ease;
+}
+
+.menuLink:hover .externalIcon {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .dropdown {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu,
+  .trigger::after,
+  .menuLink,
+  .arrow {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}

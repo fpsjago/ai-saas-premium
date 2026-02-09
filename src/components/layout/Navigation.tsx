@@ -3,6 +3,7 @@ import styles from './Navigation.module.css';
 import DarkModeToggle from '../ui/DarkModeToggle';
 import Button from '../ui/Button';
 import MobileNav from './MobileNav';
+import Dropdown from './Dropdown';
 
 export interface NavLink {
   label: string;
@@ -20,6 +21,13 @@ const defaultLinks: NavLink[] = [
   { label: 'Pricing', href: '/ai-saas-premium/pricing/' },
   { label: 'About', href: '/ai-saas-premium/about/' },
   { label: 'Contact', href: '/ai-saas-premium/contact/' },
+];
+
+const resourcesLinks = [
+  { label: 'Documentation', href: '/ai-saas-premium/docs/' },
+  { label: 'API Reference', href: '/ai-saas-premium/docs/' },
+  { label: 'Blog', href: '/ai-saas-premium/blog/' },
+  { label: 'Community', href: 'https://discord.gg/nexusai', external: true },
 ];
 
 export default function Navigation({ links = defaultLinks, className = '' }: NavigationProps) {
@@ -48,6 +56,9 @@ export default function Navigation({ links = defaultLinks, className = '' }: Nav
                 <a href={l.href} className={`${styles.link} ${l.active ? styles.linkActive : ''}`}>{l.label}</a>
               </li>
             ))}
+            <li>
+              <Dropdown label="Resources" links={resourcesLinks} />
+            </li>
           </ul>
 
           <div className={styles.actions}>

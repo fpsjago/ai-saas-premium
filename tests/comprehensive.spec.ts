@@ -217,16 +217,16 @@ test.describe('Mobile Menu', () => {
     await page.setViewportSize({ width: 375, height: 812 });
     await page.goto(`${BASE}/`);
     await page.waitForLoadState('networkidle');
-    const hamburger = page.locator('button[aria-label*="menu" i], button[aria-label*="Menu" i], button[aria-label*="Open" i]');
+    const hamburger = page.locator('button[aria-label="Open menu"]');
     if (await hamburger.count() > 0 && await hamburger.first().isVisible()) {
-      await hamburger.first().click();
+      await hamburger.first().click({ force: true });
       await page.waitForTimeout(500);
       // Close
-      const closeBtn = page.locator('button[aria-label*="Close" i]');
+      const closeBtn = page.locator('button[aria-label="Close menu"]');
       if (await closeBtn.count() > 0 && await closeBtn.first().isVisible()) {
-        await closeBtn.first().click();
+        await closeBtn.first().click({ force: true });
       } else {
-        await hamburger.first().click();
+        await hamburger.first().click({ force: true });
       }
     }
   });

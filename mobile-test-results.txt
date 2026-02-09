@@ -1,0 +1,96 @@
+
+Running 92 tests using 1 worker
+
+[1A[2K[1/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on Home
+[1A[2K[2/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on Features
+[1A[2K[3/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on Pricing
+[1A[2K[4/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on About
+[1A[2K[5/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on Contact
+[1A[2K[6/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on Blog
+[1A[2K[7/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on Case Studies
+[1A[2K[8/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on Changelog
+[1A[2K[9/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on Docs
+[1A[2K[10/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on /blog/ai-deployment-trends-2026/
+[1A[2K[11/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on /blog/developer-productivity-metrics/
+[1A[2K[12/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on /blog/platform-engineering-guide/
+[1A[2K[13/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on /blog/scaling-to-million-users/
+[1A[2K[14/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on /blog/security-best-practices/
+[1A[2K[15/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on /blog/zero-downtime-deployments/
+[1A[2K[16/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on /case-studies/cloudops-scale/
+[1A[2K[17/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on /case-studies/devhub-productivity/
+[1A[2K[18/92] [mobile] › tests/comprehensive.spec.ts:37:5 › Console Errors › no console errors on /case-studies/techflow-ai/
+[1A[2K[19/92] [mobile] › tests/comprehensive.spec.ts:52:3 › Navigation › logo links to home
+[1A[2K[20/92] [mobile] › tests/comprehensive.spec.ts:58:3 › Navigation › nav links work
+[1A[2K[21/92] [mobile] › tests/comprehensive.spec.ts:75:3 › Navigation › footer links present
+[1A[2K[22/92] [mobile] › tests/comprehensive.spec.ts:84:3 › Navigation › active link state on current page
+[1A[2K[23/92] [mobile] › tests/comprehensive.spec.ts:102:5 › Breadcrumbs › breadcrumbs on Features
+[1A[2K[24/92] [mobile] › tests/comprehensive.spec.ts:102:5 › Breadcrumbs › breadcrumbs on Pricing
+[1A[2K[25/92] [mobile] › tests/comprehensive.spec.ts:102:5 › Breadcrumbs › breadcrumbs on About
+[1A[2K[26/92] [mobile] › tests/comprehensive.spec.ts:102:5 › Breadcrumbs › breadcrumbs on Contact
+[1A[2K[27/92] [mobile] › tests/comprehensive.spec.ts:102:5 › Breadcrumbs › breadcrumbs on Blog
+[1A[2K[28/92] [mobile] › tests/comprehensive.spec.ts:102:5 › Breadcrumbs › breadcrumbs on Case Studies
+[1A[2K[29/92] [mobile] › tests/comprehensive.spec.ts:102:5 › Breadcrumbs › breadcrumbs on Changelog
+[1A[2K[30/92] [mobile] › tests/comprehensive.spec.ts:102:5 › Breadcrumbs › breadcrumbs on Docs
+[1A[2K[31/92] [mobile] › tests/comprehensive.spec.ts:117:3 › Interactive Elements › contact form inputs work
+[1A[2K[32/92] [mobile] › tests/comprehensive.spec.ts:127:3 › Interactive Elements › contact form submit works
+[1A[2K[33/92] [mobile] › tests/comprehensive.spec.ts:138:3 › Interactive Elements › contact form validation - required fields
+[1A[2K[34/92] [mobile] › tests/comprehensive.spec.ts:146:3 › Interactive Elements › newsletter form in footer
+[1A[2K[35/92] [mobile] › tests/comprehensive.spec.ts:154:3 › Interactive Elements › pricing toggle switches monthly/yearly
+[1A[2K[36/92] [mobile] › tests/comprehensive.spec.ts:165:3 › Interactive Elements › dark mode toggle works
+[1A[2K[37/92] [mobile] › tests/comprehensive.spec.ts:180:3 › Interactive Elements › CTA buttons are clickable
+[1A[2K[38/92] [mobile] › tests/comprehensive.spec.ts:195:3 › Accordion › accordion expands and collapses
+[1A[2K[39/92] [mobile] › tests/comprehensive.spec.ts:216:3 › Mobile Menu › hamburger opens and closes menu
+[1A[2K[40/92] [mobile] › tests/comprehensive.spec.ts:239:3 › Scroll Animations › fade-up elements exist on home
+[1A[2K[41/92] [mobile] › tests/comprehensive.spec.ts:246:3 › Scroll Animations › scroll progress bar updates
+[1A[2K[42/92] [mobile] › tests/comprehensive.spec.ts:262:3 › Testimonial Carousel › carousel navigation works
+[1A[2K[43/92] [mobile] › tests/comprehensive.spec.ts:280:5 › Dark Mode Toggle › dark mode toggle on Home
+[1A[2K[44/92] [mobile] › tests/comprehensive.spec.ts:280:5 › Dark Mode Toggle › dark mode toggle on Features
+[1A[2K[45/92] [mobile] › tests/comprehensive.spec.ts:280:5 › Dark Mode Toggle › dark mode toggle on Pricing
+[1A[2K[46/92] [mobile] › tests/comprehensive.spec.ts:280:5 › Dark Mode Toggle › dark mode toggle on About
+[1A[2K[47/92] [mobile] › tests/comprehensive.spec.ts:280:5 › Dark Mode Toggle › dark mode toggle on Contact
+[1A[2K[48/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /
+[1A[2K[49/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /features/
+[1A[2K[50/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /pricing/
+[1A[2K[51/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /about/
+[1A[2K[52/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /contact/
+[1A[2K[53/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /blog/
+[1A[2K[54/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /case-studies/
+[1A[2K[55/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /changelog/
+[1A[2K[56/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /docs/
+[1A[2K[57/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /blog/ai-deployment-trends-2026/
+[1A[2K[58/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /blog/developer-productivity-metrics/
+[1A[2K[59/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /blog/platform-engineering-guide/
+[1A[2K[60/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /blog/scaling-to-million-users/
+[1A[2K[61/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /blog/security-best-practices/
+[1A[2K[62/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /blog/zero-downtime-deployments/
+[1A[2K[63/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /case-studies/cloudops-scale/
+[1A[2K[64/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /case-studies/devhub-productivity/
+[1A[2K[65/92] [mobile] › tests/comprehensive.spec.ts:316:5 › All Pages Load › loads /case-studies/techflow-ai/
+[1A[2K[66/92] [mobile] › tests/comprehensive.spec.ts:330:3 › No Broken Links › home page has no broken internal links
+[1A[2K[67/92] [mobile] › tests/comprehensive.spec.ts:350:3 › Accessibility › navigation has aria-label
+[1A[2K[68/92] [mobile] › tests/comprehensive.spec.ts:356:3 › Accessibility › images have alt text
+[1A[2K[69/92] [mobile] › tests/comprehensive.spec.ts:366:3 › Accessibility › semantic HTML structure
+[1A[2K[70/92] [mobile] › tests/comprehensive.spec.ts:375:3 › Accessibility › keyboard focus visible on interactive elements
+[1A[2K[71/92] [mobile] › tests/comprehensive.spec.ts:384:3 › Accessibility › buttons have accessible names
+[1A[2K[72/92] [mobile] › tests/comprehensive.spec.ts:409:5 › Responsive › no horizontal scroll at iPhone SE (320px)
+[1A[2K[73/92] [mobile] › tests/comprehensive.spec.ts:409:5 › Responsive › no horizontal scroll at iPhone 12 (375px)
+[1A[2K[74/92] [mobile] › tests/comprehensive.spec.ts:409:5 › Responsive › no horizontal scroll at iPad (768px)
+[1A[2K[75/92] [mobile] › tests/comprehensive.spec.ts:409:5 › Responsive › no horizontal scroll at Desktop (1440px)
+[1A[2K[76/92] [mobile] › tests/comprehensive.spec.ts:430:5 › Content QA › no Lorem Ipsum on Home
+[1A[2K[77/92] [mobile] › tests/comprehensive.spec.ts:430:5 › Content QA › no Lorem Ipsum on Features
+[1A[2K[78/92] [mobile] › tests/comprehensive.spec.ts:430:5 › Content QA › no Lorem Ipsum on Pricing
+[1A[2K[79/92] [mobile] › tests/comprehensive.spec.ts:430:5 › Content QA › no Lorem Ipsum on About
+[1A[2K[80/92] [mobile] › tests/comprehensive.spec.ts:430:5 › Content QA › no Lorem Ipsum on Contact
+[1A[2K[81/92] [mobile] › tests/comprehensive.spec.ts:430:5 › Content QA › no Lorem Ipsum on Blog
+[1A[2K[82/92] [mobile] › tests/comprehensive.spec.ts:430:5 › Content QA › no Lorem Ipsum on Case Studies
+[1A[2K[83/92] [mobile] › tests/comprehensive.spec.ts:430:5 › Content QA › no Lorem Ipsum on Changelog
+[1A[2K[84/92] [mobile] › tests/comprehensive.spec.ts:430:5 › Content QA › no Lorem Ipsum on Docs
+[1A[2K[85/92] [mobile] › tests/comprehensive.spec.ts:442:3 › User Journeys › Home → Features → Pricing
+[1A[2K[86/92] [mobile] › tests/comprehensive.spec.ts:450:3 › User Journeys › Home → Blog → Post
+[1A[2K[87/92] [mobile] › tests/comprehensive.spec.ts:463:3 › User Journeys › Home → Case Studies → Detail
+[1A[2K[88/92] [mobile] › tests/comprehensive.spec.ts:478:3 › Reduced Motion › respects prefers-reduced-motion
+[1A[2K[89/92] [mobile] › tests/comprehensive.spec.ts:492:3 › Hover States › button hover effect
+[1A[2K[90/92] [mobile] › tests/comprehensive.spec.ts:508:3 › External Links › social links have proper attributes
+[1A[2K[91/92] [mobile] › tests/comprehensive.spec.ts:521:3 › 404 Page › 404 page works
+[1A[2K[92/92] [mobile] › tests/comprehensive.spec.ts:531:3 › Stats Counter › stats bar visible on home
+[1A[2K  92 passed (3.5m)
