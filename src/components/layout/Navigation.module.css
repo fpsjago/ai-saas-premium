@@ -105,7 +105,8 @@
 
 @media (max-width: 768px) {
   .links { display: none; }
-  .hamburger { display: flex; }
+  .hamburger { display: flex; z-index: 10; }
+  .actions a { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .nav, .link::after, .hamburger span { transition-duration: 0.01ms !important; }

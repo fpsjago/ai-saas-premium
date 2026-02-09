@@ -2,6 +2,9 @@
 import Layout from '../../layouts/Layout.astro';
 import Container from '../../components/layout/Container.astro';
 import Section from '../../components/layout/Section.astro';
+import Navigation from '../../components/layout/Navigation';
+import Footer from '../../components/layout/Footer';
+import ScrollProgress from '../../components/effects/ScrollProgress';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -31,6 +34,14 @@ const toc = headings.filter(h => h.depth <= 3);
   title={`${post.data.title} — NexusAI Blog`}
   description={post.data.excerpt}
 >
+  <ScrollProgress client:load />
+  <Navigation client:load links={[
+    { label: "Features", href: "/ai-saas-premium/features/" },
+    { label: "Pricing", href: "/ai-saas-premium/pricing/" },
+    { label: "About", href: "/ai-saas-premium/about/" },
+    { label: "Contact", href: "/ai-saas-premium/contact/" },
+  ]} />
+
   <!-- Article Header -->
   <Section size="lg" class="page-hero">
     <div class="hero-bg" aria-hidden="true">
@@ -148,6 +159,8 @@ const toc = headings.filter(h => h.depth <= 3);
       </div>
     </Container>
   </Section>
+
+  <Footer client:load />
 </Layout>
 
 <style>

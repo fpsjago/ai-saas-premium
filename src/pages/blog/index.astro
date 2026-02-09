@@ -2,6 +2,9 @@
 import Layout from '../../layouts/Layout.astro';
 import Container from '../../components/layout/Container.astro';
 import Section from '../../components/layout/Section.astro';
+import Navigation from '../../components/layout/Navigation';
+import Footer from '../../components/layout/Footer';
+import ScrollProgress from '../../components/effects/ScrollProgress';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('blog');
@@ -19,6 +22,14 @@ function formatDate(date: Date) {
   title="Blog — NexusAI"
   description="Insights, tutorials, and updates from the NexusAI team on AI deployment, developer productivity, and platform engineering."
 >
+  <ScrollProgress client:load />
+  <Navigation client:load links={[
+    { label: "Features", href: "/ai-saas-premium/features/" },
+    { label: "Pricing", href: "/ai-saas-premium/pricing/" },
+    { label: "About", href: "/ai-saas-premium/about/" },
+    { label: "Contact", href: "/ai-saas-premium/contact/" },
+  ]} />
+
   <!-- Hero -->
   <Section size="lg" class="page-hero">
     <div class="hero-bg" aria-hidden="true">
@@ -114,6 +125,8 @@ function formatDate(date: Date) {
       </div>
     </Container>
   </Section>
+
+  <Footer client:load />
 </Layout>
 
 <style>

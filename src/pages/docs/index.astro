@@ -2,6 +2,9 @@
 import Layout from '../../layouts/Layout.astro';
 import Container from '../../components/layout/Container.astro';
 import Section from '../../components/layout/Section.astro';
+import Navigation from '../../components/layout/Navigation';
+import Footer from '../../components/layout/Footer';
+import ScrollProgress from '../../components/effects/ScrollProgress';
 
 const endpoints = [
   {
@@ -50,6 +53,14 @@ const sdks = [
   title="Documentation — NexusAI"
   description="Get started with NexusAI. API reference, code examples, SDKs, and guides."
 >
+  <ScrollProgress client:load />
+  <Navigation client:load links={[
+    { label: "Features", href: "/ai-saas-premium/features/" },
+    { label: "Pricing", href: "/ai-saas-premium/pricing/" },
+    { label: "About", href: "/ai-saas-premium/about/" },
+    { label: "Contact", href: "/ai-saas-premium/contact/" },
+  ]} />
+
   <!-- Hero -->
   <Section size="lg" class="page-hero">
     <div class="hero-bg" aria-hidden="true">
@@ -228,6 +239,8 @@ metrics = client.monitor.<span class="fn">get_metrics</span>(
       </div>
     </Container>
   </Section>
+
+  <Footer client:load />
 </Layout>
 
 <style>
