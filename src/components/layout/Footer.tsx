@@ -31,30 +31,30 @@ export default function Footer({ className = '' }: { className?: string }) {
             </div>
           </div>
           <div className={styles.column}>
-            <h4 className={styles.columnTitle}>Product</h4>
+            <p className={styles.columnTitle}>Product</p>
             <ul className={styles.columnLinks}>
               <li><a href="/ai-saas-premium/features/" className={styles.columnLink}>Features</a></li>
               <li><a href="/ai-saas-premium/pricing/" className={styles.columnLink}>Pricing</a></li>
-              <li><a href="/ai-saas-premium/features/" className={styles.columnLink}>Integrations</a></li>
-              <li><a href="/ai-saas-premium/" className={styles.columnLink}>Changelog</a></li>
+              <li><a href="/ai-saas-premium/case-studies/" className={styles.columnLink}>Case Studies</a></li>
+              <li><a href="/ai-saas-premium/changelog/" className={styles.columnLink}>Changelog</a></li>
             </ul>
           </div>
           <div className={styles.column}>
-            <h4 className={styles.columnTitle}>Resources</h4>
+            <p className={styles.columnTitle}>Resources</p>
             <ul className={styles.columnLinks}>
-              <li><a href="#" className={styles.columnLink}>Documentation</a></li>
-              <li><a href="#" className={styles.columnLink}>API Reference</a></li>
-              <li><a href="#" className={styles.columnLink}>Blog</a></li>
-              <li><a href="#" className={styles.columnLink}>Community</a></li>
+              <li><a href="/ai-saas-premium/docs/" className={styles.columnLink}>Documentation</a></li>
+              <li><a href="/ai-saas-premium/docs/" className={styles.columnLink}>API Reference</a></li>
+              <li><a href="/ai-saas-premium/blog/" className={styles.columnLink}>Blog</a></li>
+              <li><a href="https://discord.gg/nexusai" className={styles.columnLink}>Community</a></li>
             </ul>
           </div>
           <div className={styles.column}>
-            <h4 className={styles.columnTitle}>Company</h4>
+            <p className={styles.columnTitle}>Company</p>
             <ul className={styles.columnLinks}>
               <li><a href="/ai-saas-premium/about/" className={styles.columnLink}>About</a></li>
-              <li><a href="/ai-saas-premium/about/" className={styles.columnLink}>Careers</a></li>
+              <li><a href="/ai-saas-premium/about/" className={styles.columnLink}>Team</a></li>
               <li><a href="/ai-saas-premium/contact/" className={styles.columnLink}>Contact</a></li>
-              <li><a href="/ai-saas-premium/about/" className={styles.columnLink}>Press</a></li>
+              <li><a href="/ai-saas-premium/blog/" className={styles.columnLink}>Blog</a></li>
             </ul>
           </div>
         </div>

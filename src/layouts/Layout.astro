@@ -49,7 +49,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    </noscript>
 
     <ViewTransitions />
 
@@ -63,7 +68,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </script>
   </head>
   <body>
-    <slot />
+    <main>
+      <slot />
+    </main>
 
     <script>
       import { initScrollObserver } from '../lib/scroll-observer';

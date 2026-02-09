@@ -193,7 +193,7 @@
   margin-left: var(--space-3);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
 .terminalBody {
@@ -211,8 +211,8 @@
 
 .terminalPrompt { color: var(--accent); }
 .terminalCmd { color: var(--text); }
-.terminalOutput { color: var(--success); }
-.terminalComment { color: var(--text-muted); }
+.terminalOutput { color: #4ADE80; }
+.terminalComment { color: var(--text-secondary); }
 
 /* Floating metric cards */
 .metricCard {

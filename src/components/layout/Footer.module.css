@@ -117,7 +117,7 @@
   gap: var(--space-4);
 }
 .copyright {
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-size: var(--text-xs);
 }
 .legal {
@@ -125,7 +125,7 @@
   gap: var(--space-4);
 }
 .legalLink {
-  color: var(--text-muted);
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: var(--text-xs);
   transition: color var(--duration-fast) ease;
