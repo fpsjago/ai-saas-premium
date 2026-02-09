@@ -9,7 +9,6 @@ export interface MobileNavProps {
 
 const resourcesLinks = [
   { label: 'Documentation', href: '/ai-saas-premium/docs/' },
-  { label: 'API Reference', href: '/ai-saas-premium/docs/#api' },
   { label: 'Blog', href: '/ai-saas-premium/blog/' },
   { label: 'Community', href: 'https://discord.gg/nexusai' },
 ];
