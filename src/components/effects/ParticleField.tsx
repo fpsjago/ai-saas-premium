@@ -49,9 +49,9 @@ export default function ParticleField({
           y: Math.random() * h,
           vx: (Math.random() - 0.5) * 0.4,
           vy: (Math.random() - 0.5) * 0.4,
-          r: Math.random() * 1.5 + 0.5,
+          r: Math.random() * 2 + 1,
           color,
-          opacity: Math.random() * 0.15 + 0.15,
+          opacity: Math.random() * 0.3 + 0.5,
         });
       }
     };
@@ -81,8 +81,8 @@ export default function ParticleField({
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(q.x, q.y);
-            ctx.strokeStyle = p.color + (0.08 * (1 - dist / lineDistance)) + ')';
-            ctx.lineWidth = 0.5;
+            ctx.strokeStyle = p.color + (0.25 * (1 - dist / lineDistance)) + ')';
+            ctx.lineWidth = 1;
             ctx.stroke();
           }
         }
