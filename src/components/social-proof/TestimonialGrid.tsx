@@ -19,7 +19,11 @@ export default function TestimonialGrid({ testimonials }: TestimonialGridProps) 
         <div key={i} className={`${styles.card} fade-up`}>
           {t.rating && (
             <div className={styles.stars} aria-label={`${t.rating} out of 5 stars`}>
-              {'★'.repeat(t.rating)}{'☆'.repeat(5 - t.rating)}
+              {Array.from({ length: 5 }, (_, idx) => (
+                <svg key={idx} width="16" height="16" viewBox="0 0 24 24" fill={idx < t.rating ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              ))}
             </div>
           )}
           <p className={styles.quote}>{t.quote}</p>
