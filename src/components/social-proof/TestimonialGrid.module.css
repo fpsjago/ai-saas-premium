@@ -64,6 +64,8 @@
   color: #F59E0B;
   font-size: var(--text-sm);
   margin-bottom: var(--space-3);
+  display: flex;
+  gap: 2px;
 }
 
 @media (max-width: 768px) { .grid { columns: 2; } }
