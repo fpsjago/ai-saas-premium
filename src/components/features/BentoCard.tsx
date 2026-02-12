@@ -1,8 +1,9 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, type ReactNode } from 'react';
 import styles from './BentoCard.module.css';
+import { getIcon, type IconName } from '../icons/IconMap';
 
 export interface BentoCardProps {
-  icon: string;
+  icon: ReactNode | IconName;
   title: string;
   description: string;
   stat?: string;
@@ -10,6 +11,7 @@ export interface BentoCardProps {
 }
 
 export default function BentoCard({ icon, title, description, stat, size = 'small' }: BentoCardProps) {
+  const iconElement = typeof icon === 'string' ? getIcon(icon as IconName, 24) : icon;
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -51,7 +53,7 @@ export default function BentoCard({ icon, title, description, stat, size = 'smal
 
   return (
     <div ref={ref} className={`${styles.card} ${styles[size]} fade-up`} data-tilt>
-      <div className={styles.icon} aria-hidden="true">{icon}</div>
+      <div className={styles.icon} aria-hidden="true">{iconElement}</div>
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{description}</p>
       {stat && <div className={styles.stat}>{stat}</div>}

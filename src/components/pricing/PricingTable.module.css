@@ -13,7 +13,7 @@
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
-  padding: var(--space-8);
+  padding: var(--space-10);
   transition: transform var(--duration-normal) ease, box-shadow var(--duration-normal) ease;
 }
 

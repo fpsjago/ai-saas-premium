@@ -1,3 +1,4 @@
+import { CheckIcon } from '../icons/Icons';
 import styles from './FeatureShowcase.module.css';
 
 export interface FeatureShowcaseProps {
@@ -31,7 +32,7 @@ export default function FeatureShowcase({
           <div className={styles.bullets}>
             {bullets.map((b, i) => (
               <div key={i} className={styles.bullet}>
-                <span className={styles.checkIcon}>✓</span>
+                <span className={styles.checkIcon}><CheckIcon size={16} /></span>
                 {b}
               </div>
             ))}

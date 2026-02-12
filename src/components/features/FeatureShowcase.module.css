@@ -1,11 +1,11 @@
 .showcase {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-16);
+  gap: var(--space-20);
   align-items: center;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: var(--space-16) var(--container-padding);
+  padding: var(--space-20) var(--container-padding);
 }
 
 .showcase.reversed { direction: rtl; }

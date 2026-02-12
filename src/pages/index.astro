@@ -136,7 +136,7 @@ const optimizedTesting = await getImage({ src: testingImg, format: 'webp', width
         <p style="font-size: var(--text-body-lg); color: rgba(255,255,255,0.85); max-width: 500px; margin: 0 auto var(--space-8);">Join 10,000+ developers building the future with NexusAI. Start your free trial today.</p>
         <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
           <a href="#" class="cta-button-primary">Start Free Trial</a>
-          <a href="/ai-saas-premium/contact/" class="cta-button-secondary">Talk to Sales</a>
+          <a href={import.meta.env.BASE_URL + 'contact/'} class="cta-button-secondary">Talk to Sales</a>
         </div>
       </div>
     </div>

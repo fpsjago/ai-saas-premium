@@ -3,7 +3,7 @@
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: var(--space-6);
+  padding: var(--space-8);
   transition: transform var(--duration-normal) var(--ease-out-expo),
               border-color var(--duration-normal) ease,
               box-shadow var(--duration-normal) ease;

@@ -17,15 +17,15 @@ export interface NavigationProps {
 }
 
 const defaultLinks: NavLink[] = [
-  { label: 'Features', href: '/ai-saas-premium/features/' },
-  { label: 'Pricing', href: '/ai-saas-premium/pricing/' },
-  { label: 'About', href: '/ai-saas-premium/about/' },
-  { label: 'Contact', href: '/ai-saas-premium/contact/' },
+  { label: 'Features', href: import.meta.env.BASE_URL + 'features/' },
+  { label: 'Pricing', href: import.meta.env.BASE_URL + 'pricing/' },
+  { label: 'About', href: import.meta.env.BASE_URL + 'about/' },
+  { label: 'Contact', href: import.meta.env.BASE_URL + 'contact/' },
 ];
 
 const resourcesLinks = [
-  { label: 'Documentation', href: '/ai-saas-premium/docs/' },
-  { label: 'Blog', href: '/ai-saas-premium/blog/' },
+  { label: 'Documentation', href: import.meta.env.BASE_URL + 'docs/' },
+  { label: 'Blog', href: import.meta.env.BASE_URL + 'blog/' },
   { label: 'Community', href: 'https://discord.gg/nexusai', external: true },
 ];
 
@@ -44,7 +44,7 @@ export default function Navigation({ links = defaultLinks, className = '' }: Nav
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''} ${className}`} role="navigation" aria-label="Main navigation">
         <div className={styles.inner}>
-          <a href="/ai-saas-premium/" className={styles.logo}>
+          <a href={import.meta.env.BASE_URL} className={styles.logo}>
             <span className={styles.logoIcon}>N</span>
             NexusAI
           </a>

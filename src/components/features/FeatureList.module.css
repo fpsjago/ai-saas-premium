@@ -9,7 +9,7 @@
 
 .item {
   text-align: center;
-  padding: var(--space-6);
+  padding: var(--space-8);
   border-radius: var(--radius-lg);
   transition: transform var(--duration-normal) ease, background var(--duration-normal) ease;
 }

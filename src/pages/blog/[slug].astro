@@ -51,9 +51,9 @@ const toc = headings.filter(h => h.depth <= 3);
     <Container>
       <div style="position: relative; z-index: 1; max-width: 720px; margin: 0 auto; text-align: center;">
         <nav class="breadcrumbs fade-up" aria-label="Breadcrumb">
-          <a href="/ai-saas-premium/">Home</a>
+          <a href={import.meta.env.BASE_URL}>Home</a>
           <span class="sep">/</span>
-          <a href="/ai-saas-premium/blog/">Blog</a>
+          <a href={import.meta.env.BASE_URL + 'blog/'}>Blog</a>
           <span class="sep">/</span>
           <span class="current">{post.data.category}</span>
         </nav>

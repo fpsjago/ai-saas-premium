@@ -14,7 +14,7 @@
 .card {
   flex: 0 0 100%;
   max-width: 100%;
-  padding: var(--space-8);
+  padding: var(--space-10);
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);

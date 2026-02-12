@@ -33,27 +33,27 @@ export default function Footer({ className = '' }: { className?: string }) {
           <div className={styles.column}>
             <p className={styles.columnTitle}>Product</p>
             <ul className={styles.columnLinks}>
-              <li><a href="/ai-saas-premium/features/" className={styles.columnLink}>Features</a></li>
-              <li><a href="/ai-saas-premium/pricing/" className={styles.columnLink}>Pricing</a></li>
-              <li><a href="/ai-saas-premium/case-studies/" className={styles.columnLink}>Case Studies</a></li>
-              <li><a href="/ai-saas-premium/changelog/" className={styles.columnLink}>Changelog</a></li>
+              <li><a href={import.meta.env.BASE_URL + 'features/'} className={styles.columnLink}>Features</a></li>
+              <li><a href={import.meta.env.BASE_URL + 'pricing/'} className={styles.columnLink}>Pricing</a></li>
+              <li><a href={import.meta.env.BASE_URL + 'case-studies/'} className={styles.columnLink}>Case Studies</a></li>
+              <li><a href={import.meta.env.BASE_URL + 'changelog/'} className={styles.columnLink}>Changelog</a></li>
             </ul>
           </div>
           <div className={styles.column}>
             <p className={styles.columnTitle}>Resources</p>
             <ul className={styles.columnLinks}>
-              <li><a href="/ai-saas-premium/docs/" className={styles.columnLink}>Documentation</a></li>
-              <li><a href="/ai-saas-premium/blog/" className={styles.columnLink}>Blog</a></li>
+              <li><a href={import.meta.env.BASE_URL + 'docs/'} className={styles.columnLink}>Documentation</a></li>
+              <li><a href={import.meta.env.BASE_URL + 'blog/'} className={styles.columnLink}>Blog</a></li>
               <li><a href="https://discord.gg/nexusai" className={styles.columnLink}>Community</a></li>
             </ul>
           </div>
           <div className={styles.column}>
             <p className={styles.columnTitle}>Company</p>
             <ul className={styles.columnLinks}>
-              <li><a href="/ai-saas-premium/about/" className={styles.columnLink}>About</a></li>
-              <li><a href="/ai-saas-premium/about/" className={styles.columnLink}>Team</a></li>
-              <li><a href="/ai-saas-premium/contact/" className={styles.columnLink}>Contact</a></li>
-              <li><a href="/ai-saas-premium/blog/" className={styles.columnLink}>Blog</a></li>
+              <li><a href={import.meta.env.BASE_URL + 'about/'} className={styles.columnLink}>About</a></li>
+              <li><a href={import.meta.env.BASE_URL + 'about/'} className={styles.columnLink}>Team</a></li>
+              <li><a href={import.meta.env.BASE_URL + 'contact/'} className={styles.columnLink}>Contact</a></li>
+              <li><a href={import.meta.env.BASE_URL + 'blog/'} className={styles.columnLink}>Blog</a></li>
             </ul>
           </div>
         </div>
