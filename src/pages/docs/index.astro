@@ -101,10 +101,10 @@ const sdks = [
           <div class="terminal-body">
             <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">npm install -g @nexusai/cli</span></div>
             <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">nexus init my-project</span></div>
-            <div class="terminal-line output">✓ Project initialized with default configuration</div>
+            <div class="terminal-line output">→ Project initialized with default configuration</div>
             <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">nexus deploy</span></div>
             <div class="terminal-line output">→ Deploying to production...</div>
-            <div class="terminal-line output success">✓ Deployed successfully in 3.2s</div>
+            <div class="terminal-line output success">→ Deployed successfully in 3.2s</div>
             <div class="terminal-line output">  → https://my-project.nexusai.app</div>
           </div>
         </div>
@@ -323,7 +323,7 @@ metrics = client.monitor.<span class="fn">get_metrics</span>(
     padding: var(--space-1) 0; padding-left: var(--space-4);
     position: relative;
   }
-  .api-card__features li::before { content: '✓'; position: absolute; left: 0; color: var(--success); }
+  .api-card__features li::before { content: ''; position: absolute; left: 0; width: 14px; height: 14px; top: 4px; border-left: 2.5px solid var(--success); border-bottom: 2.5px solid var(--success); transform: rotate(-45deg); }
 
   .examples-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));

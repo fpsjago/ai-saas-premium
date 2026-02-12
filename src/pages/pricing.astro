@@ -64,9 +64,9 @@ import { pricingTestimonials } from '../data/testimonials';
                 {cat.features.map((f) => (
                   <tr style="border-bottom: 1px solid var(--border-subtle);">
                     <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--text-secondary);">{f.name}</td>
-                    <td style="text-align: center; padding: var(--space-3); font-size: var(--text-sm);">{typeof f.starter === 'boolean' ? (f.starter ? '✓' : '—') : f.starter}</td>
-                    <td style="text-align: center; padding: var(--space-3); font-size: var(--text-sm); color: var(--violet-400);">{typeof f.pro === 'boolean' ? (f.pro ? '✓' : '—') : f.pro}</td>
-                    <td style="text-align: center; padding: var(--space-3); font-size: var(--text-sm);">{typeof f.enterprise === 'boolean' ? (f.enterprise ? '✓' : '—') : f.enterprise}</td>
+                    <td style="text-align: center; padding: var(--space-3); font-size: var(--text-sm);">{typeof f.starter === 'boolean' ? (f.starter ? <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> : '—') : f.starter}</td>
+                    <td style="text-align: center; padding: var(--space-3); font-size: var(--text-sm); color: var(--violet-400);">{typeof f.pro === 'boolean' ? (f.pro ? <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--violet-400)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> : '—') : f.pro}</td>
+                    <td style="text-align: center; padding: var(--space-3); font-size: var(--text-sm);">{typeof f.enterprise === 'boolean' ? (f.enterprise ? <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> : '—') : f.enterprise}</td>
                   </tr>
                 ))}
               </>

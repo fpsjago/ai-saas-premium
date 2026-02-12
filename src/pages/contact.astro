@@ -28,7 +28,7 @@ import HeroPage from '../components/hero/HeroPage';
   <Section>
     <Container>
       <div style="max-width: 640px; margin: 0 auto;">
-        <form class="fade-up" style="display: flex; flex-direction: column; gap: var(--space-6);" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Message Sent! ✓'; this.querySelector('button').style.background='var(--success)';">
+        <form class="fade-up" style="display: flex; flex-direction: column; gap: var(--space-6);" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Message Sent!'; this.querySelector('button').style.background='var(--success)';">
           <div>
             <label for="name" style="display: block; font-size: var(--text-sm); font-weight: 600; margin-bottom: var(--space-2);">Name</label>
             <input id="name" type="text" required placeholder="Your full name" style="width: 100%; padding: var(--space-3) var(--space-4); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); color: var(--text-primary); font-size: var(--text-body); outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--violet-500)'" onblur="this.style.borderColor='var(--border)'" />

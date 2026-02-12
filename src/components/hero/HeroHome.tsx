@@ -38,9 +38,9 @@ export default function HeroHome({
   proofText = "Join <strong>10,000+</strong> developers shipping with NexusAI",
   terminalLines = [
     { prompt: "~", cmd: "npx create-nexus-app my-project" },
-    { output: "✓ Project scaffolded in 2.3s" },
-    { output: "✓ AI models configured" },
-    { output: "✓ Deploy pipeline ready" },
+    { output: "→ Project scaffolded in 2.3s" },
+    { output: "→ AI models configured" },
+    { output: "→ Deploy pipeline ready" },
     { comment: "# Your AI app is live" },
   ],
   metrics = [
