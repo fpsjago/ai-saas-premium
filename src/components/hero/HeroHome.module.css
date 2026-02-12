@@ -230,13 +230,13 @@
 
 .metricCard:nth-child(1) {
   top: -20px;
-  right: -30px;
+  right: 0;
   animation-delay: 0s;
 }
 
 .metricCard:nth-child(2) {
   bottom: 40px;
-  left: -40px;
+  left: 0;
   animation-delay: 2s;
 }
 
@@ -287,8 +287,9 @@
   .hero { padding: var(--space-24) 0 var(--space-16); min-height: auto; }
   .ctas { flex-direction: column; }
   .btnPrimary, .btnSecondary { justify-content: center; }
-  .metricCard:nth-child(1) { right: -10px; }
-  .metricCard:nth-child(2) { left: -10px; }
+  .visual { overflow: hidden; }
+  .metricCard:nth-child(1) { right: 0; }
+  .metricCard:nth-child(2) { left: 0; }
 }
 
 @media (max-width: 480px) {
