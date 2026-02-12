@@ -11,17 +11,17 @@ import HeroPage from '../components/hero/HeroPage';
 <Layout title="Contact — NexusAI" description="Get in touch with the NexusAI team. We'd love to hear from you.">
   <ScrollProgress client:load />
   <Navigation client:load links={[
-    { label: "Features", href: "/ai-saas-premium/features/" },
-    { label: "Pricing", href: "/ai-saas-premium/pricing/" },
-    { label: "About", href: "/ai-saas-premium/about/" },
-    { label: "Contact", href: "/ai-saas-premium/contact/", active: true },
+    { label: "Features", href: `${import.meta.env.BASE_URL}features/` },
+    { label: "Pricing", href: `${import.meta.env.BASE_URL}pricing/` },
+    { label: "About", href: `${import.meta.env.BASE_URL}about/` },
+    { label: "Contact", href: `${import.meta.env.BASE_URL}contact/`, active: true },
   ]} />
 
   <!-- Hero -->
   <HeroPage client:load
     title="Let's talk"
     description="Have a question, feedback, or want to explore enterprise options? We'd love to hear from you."
-    breadcrumbs={[{ label: "Home", href: "/ai-saas-premium/" }, { label: "Contact" }]}
+    breadcrumbs={[{ label: "Home", href: `${import.meta.env.BASE_URL}` }, { label: "Contact" }]}
   />
 
   <!-- Contact Form -->
@@ -56,19 +56,19 @@ import HeroPage from '../components/hero/HeroPage';
       </div>
       <div class="stagger" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6);">
         <div class="fade-up" style="text-align: center; padding: var(--space-8); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); transition: transform 0.3s ease, border-color 0.3s ease;">
-          <div style="font-size: 2rem; margin-bottom: var(--space-4);">📧</div>
+          <div style="margin-bottom: var(--space-4); color: var(--violet-400);"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13L2 4"/></svg></div>
           <h3 style="font-size: var(--text-body); margin-bottom: var(--space-2);">Email Support</h3>
           <p style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--space-4);">Get a response within 4 hours during business hours.</p>
           <a href="mailto:support@nexusai.dev" style="font-size: var(--text-sm); color: var(--violet-400); text-decoration: none; font-weight: 600;">support@nexusai.dev</a>
         </div>
         <div class="fade-up" style="text-align: center; padding: var(--space-8); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); transition: transform 0.3s ease, border-color 0.3s ease;">
-          <div style="font-size: 2rem; margin-bottom: var(--space-4);">💬</div>
+          <div style="margin-bottom: var(--space-4); color: var(--violet-400);"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></div>
           <h3 style="font-size: var(--text-body); margin-bottom: var(--space-2);">Live Chat</h3>
           <p style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--space-4);">Chat with our team in real-time on Discord.</p>
           <a href="#" style="font-size: var(--text-sm); color: var(--violet-400); text-decoration: none; font-weight: 600;">Join our Discord</a>
         </div>
         <div class="fade-up" style="text-align: center; padding: var(--space-8); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); transition: transform 0.3s ease, border-color 0.3s ease;">
-          <div style="font-size: 2rem; margin-bottom: var(--space-4);">📚</div>
+          <div style="margin-bottom: var(--space-4); color: var(--violet-400);"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h6"/></svg></div>
           <h3 style="font-size: var(--text-body); margin-bottom: var(--space-2);">Documentation</h3>
           <p style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--space-4);">Browse guides, tutorials, and API references.</p>
           <a href="#" style="font-size: var(--text-sm); color: var(--violet-400); text-decoration: none; font-weight: 600;">Visit Docs</a>

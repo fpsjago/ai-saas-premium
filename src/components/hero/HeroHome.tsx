@@ -41,7 +41,7 @@ export default function HeroHome({
     { output: "✓ Project scaffolded in 2.3s" },
     { output: "✓ AI models configured" },
     { output: "✓ Deploy pipeline ready" },
-    { comment: "# Your AI app is live 🚀" },
+    { comment: "# Your AI app is live" },
   ],
   metrics = [
     { value: "99.9%", label: "Uptime SLA", trend: "↑" },
