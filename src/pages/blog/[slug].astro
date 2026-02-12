@@ -229,6 +229,7 @@ const toc = headings.filter(h => h.depth <= 3);
 
   .article-content {
     max-width: 720px; font-size: var(--text-body); line-height: 1.8;
+    overflow-wrap: break-word; word-wrap: break-word; min-width: 0;
   }
   .article-content :global(h2) {
     font-size: var(--text-h3); margin: var(--space-10) 0 var(--space-4); color: var(--text);
